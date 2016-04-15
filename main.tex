@@ -26,8 +26,8 @@
     urlcolor=cyan           % color of external links
 }
 
-\title[Taller de Git - Clase 1]{Taller de Git - Clase 1}
-\author[ComCom]{ComCom}
+\title{Taller de Git}
+\author{ComCom}
 \institute{DC - FCEyN - UBA}
 \date{11/03/2016}
 
@@ -253,9 +253,9 @@ nothing to commit, working directory clean
     \pause
     \begin{block}{Es corta la bocha}
         \begin{enumerate}
-            \item Ejecutamos \texttt{git commit}
-            \item Nos va a saltar un editor de texto para que le pongamos un \textbf{mensaje a los cambios}.
-            \item Guardamos el mensaje, y listo.
+            \item Ejecutamos \texttt{git commit -m [mensaje]}.
+
+                Dónde [mensaje] índica a otra persona que lea eso cuales fueron los cambios que confirmamos.
         \end{enumerate}
     \end{block}
 
@@ -296,6 +296,62 @@ nothing to commit, working directory clean
 
 \end{frame}
 
+\begin{frame}{Colaborando con otras personas}
+
+    Los repositorios remotos son \textit{copias} de tu proyecto a las cuales accedemos a través
+    de Internet. Puede haber varios, cada uno de los cuales
+    puede ser de sólo lectura, o de lectura/escritura, según los permisos que tengamos.
+
+    \vspace{0.5em}
+
+    Colaborar con otros implica gestionar estos repositorios remotos, y mandar (push) y recibir (pull)
+    datos de ellos cuando necesites compartir cosas.
+
+\end{frame}
+
+\begin{frame}[t]{Enviando cambios}
+    \begin{comando}
+        git push
+    \end{comando}
+\end{frame}
+
+\begin{frame}[t]{Trayendo cambios}
+    \begin{comando}
+        git pull
+    \end{comando}
+\end{frame}
+
+\begin{frame}[t]{Y qué pasa sí.. BOOM}
+    A veces hay conflictos.
+
+\end{frame}
+
+\begin{frame}[t]{Creando un repositorio vacio}
+    \begin{comando}
+        git init
+    \end{comando}
+\end{frame}
+
+\begin{frame}[t]{Añadiendo un repositorio remoto}
+    \begin{comando}
+        git remote
+    \end{comando}
+
+    % Para ver qué repositorios remotos están configurados, podemos usar el comando \texttt{git remote}.
+    % Si acabamos de clonar el repositorio que tiene los fuentes de estas diapositivas y corremos \texttt{git remote -v}, veremos:
+    % \begin{verbatim}
+    % origin  git@github.com:FlyingPumba/git-intro.git (fetch)
+    % origin  git@github.com:FlyingPumba/git-intro.git (push)
+    % \end{verbatim}
+    %
+    % Y si tenemos un repositorio creado localmente y queremos añadir un remoto, usamos \texttt{git remote add [nombre] [url]}.
+\end{frame}
+
+\begin{frame}[t]{A practicar !}
+    Ejercicio largo de conflictos y GitLab.
+
+\end{frame}
+
 \begin{frame}[fragile]{Viendo los cambios preparados}
     Muchas veces es conveniente ver cuales son los cambios realizados antes de mandarlos a Preparado.
     Para esto tenemos el comando \texttt{git diff}, que muestra las diferencias entre lo que hay en
@@ -307,50 +363,12 @@ nothing to commit, working directory clean
 
 \end{frame}
 
-\begin{frame}{Confirmando (``commiteando'') cambios}
-    Una vez que tenemos nuestros cambios listos en el area de preparación, podemos
-    utilizar el comando \texttt{git commit} para confirmarlos. Ningún cambio o archivo
-    que no esté en el area de preparación se incluirá en la confirmación.
-
-    \vspace{1em}
-
-    Cada confirmación requiere de un mensaje con una descripción de los cambios realizados.
-    Por ejemplo: \texttt{git commit -m ``Agrego archivo README''}. Si ejecutamos
-    \texttt{git commit} sin el parámetro \texttt{-m}, se nos abrirá el editor de texto configurado para Git,
-    en el que podremos escribir una descripción de forma más cómoda.
-
-\end{frame}
-
 \begin{frame}{Viendo la historia de los commits}
 
     Después de haber hecho varios \textit{commits}, o si acabamos de clonar un repositorio
     de internet, puede que querramos ver el historial de commits para ver cuales
     fueron las modificaciones que se hicieron. Esto se puede lograr utilizando el
     comando \texttt{git log}.
-
-\end{frame}
-
-\begin{frame}[fragile]{Trabajando con repositorios remotos}
-
-    Los repositorios remotos son versiones de tu proyecto que se encuentran alojados
-    en Internet o en algún punto de la red. Puedes tener varios, cada uno de los cuales
-    puede ser de sólo lectura, o de lectura/escritura, según los permisos que tengas.
-
-    \vspace{0.5em}
-
-    Colaborar con otros implica gestionar estos repositorios remotos, y mandar (push) y recibir (pull)
-    datos de ellos cuando necesites compartir cosas.
-
-    \vspace{0.5em}
-
-    Para ver qué repositorios remotos están configurados, podemos usar el comando \texttt{git remote}.
-    Si acabamos de clonar el repositorio que tiene los fuentes de estas diapositivas y corremos \texttt{git remote -v}, veremos:
-    \begin{verbatim}
-origin  git@github.com:FlyingPumba/git-intro.git (fetch)
-origin  git@github.com:FlyingPumba/git-intro.git (push)
-    \end{verbatim}
-
-    Y si tenemos un repositorio creado localmente y queremos añadir un remoto, usamos \texttt{git remote add [nombre] [url]}.
 
 \end{frame}
 

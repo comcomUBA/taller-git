@@ -53,7 +53,9 @@
     \end{block}
 \end{frame}
 
-\begin{frame}{Ramificaciones en Git}
+\begin{frame}[t]{Ramificaciones en Git}
+
+    Git es distribuido
 
     Cada vez que realizamos una confirmación (commit), Git almacena entre otras cosas uno o varios punteros a las confirmaciones que
     sean padres directos de esta.
@@ -77,9 +79,32 @@
     %    \end{figure}
     %\end{columns}
 
+    % Ademas de tener ramas locales, podemos tenemos ramas remotas, que referencian al estado de ramas en tus repositorios remotos.
+    % Si por ejemplo quisieramos saltar a la rama ``master'' en el repositorio remoto ``origin'' podríamos utilizar el comando \texttt{git checkout origin/master}.
+    %
+    % \vspace{1em}
+    %
+    % Nuestras ramas locales no sincronizan automaticamente con los repositorios remotos. Por esta razón, si tenemos una rama llamada ``master'' de forma local que
+    % apunta a la rama remota ``origin/master'' podemos actualizarla parandonos en ``master'' y ejecutando \texttt{git pull origin master}.
+    %
+    % \vspace{1em}
+    %
+    % De forma análoga, si queremos publicar cambios locales aun repositorio remoto, tenemos el comando \texttt{git push}. Si estamos parados en la rama ``master'':
+    % \texttt{git push origin master}.
+
 \end{frame}
 
-\begin{frame}{Cambiando de rama}
+\begin{frame}[t]{Creando ramas}
+    \begin{comando}
+        git branch
+    \end{comando}
+
+\end{frame}
+
+\begin{frame}[t]{Cambiando de rama}
+    \begin{comando}
+        git checkout
+    \end{comando}
 
     %\begin{figure}[ht]
     %    \begin{center}
@@ -96,67 +121,92 @@
 
 \end{frame}
 
-\begin{frame}{Ramas remotas}
+\begin{frame}[t]{Fusionando ramas}
+    \begin{comando}
+        git merge
+    \end{comando}
 
-    Ademas de tener ramas locales, podemos tenemos ramas remotas, que referencian al estado de ramas en tus repositorios remotos.
-    Si por ejemplo quisieramos saltar a la rama ``master'' en el repositorio remoto ``origin'' podríamos utilizar el comando \texttt{git checkout origin/master}.
+    \begin{block}{}
+        Supongamos que tenemos una rama ``iss53'' en la cual hemos terminado de arreglar un error, y queremos combinarla con la rama ``master''.
+        Para ello, simplemente nos paramos en ``master'' (\texttt{git checkout master}) y ejecutamos: \texttt{git merge iss53}.
+    \end{block}
 
-    \vspace{1em}
+        \only<2-2> {
+        	\begin{figure}[ht]
+        		\begin{center}
+        			\includegraphics[height=1.2in]{images/merge-1.png}
+        		\end{center}
+        		\caption{Antes del merge}
+        	\end{figure}
+        }
+        \only<3-3> {
+            \begin{figure}[ht]
+        		\begin{center}
+        			\includegraphics[height=1.2in]{images/merge-2.png}
+        		\end{center}
+        		\caption{Después del merge}
+        	\end{figure}
+        }
+\end{frame}
 
-    Nuestras ramas locales no sincronizan automaticamente con los repositorios remotos. Por esta razón, si tenemos una rama llamada ``master'' de forma local que
-    apunta a la rama remota ``origin/master'' podemos actualizarla parandonos en ``master'' y ejecutando \texttt{git pull origin master}.
-
-    \vspace{1em}
-
-    De forma análoga, si queremos publicar cambios locales aun repositorio remoto, tenemos el comando \texttt{git push}. Si estamos parados en la rama ``master'':
-    \texttt{git push origin master}.
+\begin{frame}[t]{A practicar!}
+    Ejercicio largo de branches (no interactivo)
 
 \end{frame}
 
-\begin{frame}{Fusionando ramas}
+\begin{frame}[t]{Revirtiendo cambios}
+    \begin{comando}
+        git commit --amend
+    \end{comando}
 
-    Supongamos que tenemos una rama ``iss53'' en la cual hemos terminado de arreglar un error, y queremos combinarla con la rama ``master''.
-    Para ello, simplemente nos paramos en ``master'' (\texttt{git checkout master}) y ejecutamos: \texttt{git merge iss53}.
+    \only<2->{
+        \begin{block}{}
+            Podemos usarlo para arreglar por ejemplo el mensaje del último commit que hicimos: \texttt{git commit --amend -m [nuevo mensaje]}
+        \end{block}
+    }
 
-	%\begin{figure}[ht]
-	%	\begin{center}
-	%		\includegraphics[height=1.5in]{images/basic-merging-1.png}
-	%	\end{center}
-	%	\caption{Antes del merge}
-	%\end{figure}
+    \vspace{2em}
 
+    \begin{comando}
+        git revert
+    \end{comando}
+
+    \only<3->{
+        \begin{block}{}
+            Permite \textit{revertir} exactamente los cambios introducidos por un commit. Buscamos el hash del commit en cuestión
+            usando \texttt{git log}, y luego ejecutamos \texttt{git revert [hash]}.
+        \end{block}
+    }
 \end{frame}
 
-\begin{frame}{Fusionando ramas}
+\begin{frame}[t]{Otro comando útil}
+    \begin{comando}
+        git stash
+    \end{comando}
 
-    Supongamos que tenemos una rama ``iss53'' en la cual hemos terminado de arreglar un error, y queremos combinarla con la rama ``master''.
-    Para ello, simplemente nos paramos en ``master'' (\texttt{git checkout master}) y ejecutamos: \texttt{git merge iss53}.
+    \pause
+    \begin{block}{}
+        Al ejecutar \texttt{git stash}, guarda el estado actual de los archivos modificados que no están marcados como \textit{preparados} y nos deja el directorio limpio.
 
-	%\begin{figure}[ht]
-	%	\begin{center}
-	%		\includegraphics[height=1.5in]{images/basic-merging-2.png}
-	%	\end{center}
-	%	\caption{Después del merge}
-	%\end{figure}
+        \vspace{0.5em}
 
+        Para volver a mostrar los cambios guardados ejecutamos \texttt{git stash pop}.
+    \end{block}
 \end{frame}
 
-\begin{frame}{Otros comandos útiles}
+\begin{frame}[t]{Extras}
 
     \begin{itemize}
         \item \texttt{git fetch [remote repository]}: para traer todos los datos de un repositorio remoto.
         \item \texttt{git reset}: para deshacer cambios, ya sea en el area de trabajo o en los commits.
-        \item \texttt{git rm}: para borrar un archivo y pasarlo al area de preparación.
-        \item \texttt{git mv}: para mover/renombrar un archivo y pasarlo al area de preparación.
-        \item \texttt{git show}: muestra información de distintos objectos de Git: commits, tags, etc.
-        \item \texttt{git stash}: guarda el estado del area de trabajo y lo limpia.
         \item \texttt{git rebase [branch]}: aplica todos los commits que difieren entre un branch y el que estamos parados.
-        \item \texttt{git tag [etiqueta] [commit hash]}: ponerle una etiqueta a un commit.
+        \item \texttt{git blame [archivo]}: ?.
+        \item \texttt{git bisect}: ?.
     \end{itemize}
 
 \end{frame}
 
-\begin{frame}{Bibliografía extra}
+\begin{frame}[t]{Bibliografía}
 
     \begin{itemize}
         \item Git Community book, disponible online y en español: \url{https://git-scm.com/book/es/v2}
@@ -165,34 +215,5 @@
 		\item Try Git online: \url{https://try.github.io}
         \item Git - SVN Crash Course: \url{https://git-scm.com/course/svn.html}
     \end{itemize}
-
-\end{frame}
-
-\begin{frame}{Mini ejercicio de práctica}
-
-	\begin{block}{Básico}
-		\begin{enumerate}
-			\item Instalar Git en tu máquina.
-			\item Clonar el repositorio que tiene los fuentes de estas diapositivas. (git@github.com:FlyingPumba/git-intro.git)
-			\item Abrir el archivo \textit{main.tex} y \textbf{arregkar} el typo en esta oración.
-			\item Pasar \textit{main.tex} al area de preparados.
-			\item Confirmar los cambios.
-		\end{enumerate}
-	\end{block}
-
-\end{frame}
-
-
-\begin{frame}{Mini ejercicio de práctica}
-
-	\begin{block}{Avanzado}
-		\begin{enumerate}
-			\item Crearse una cuenta en \url{GitHub.com}
-			\item Ir a la página del repositorio que tiene los fuentes de estas diapositivas \url{https://github.com/FlyingPumba/git-intro} y \textit{forkear} el proyecto a un repositorio personal en GitHub.
-			\item Agregar a su repositorio local un nuevo remoto llamado ``fork'' que apunte a su repositorio remoto en GitHub.
-			\item Pushear la rama ``master'' al repositorio remoto ``fork''.
-			\item Hacer un \textit{Pull request} en GitHub.
-		\end{enumerate}
-	\end{block}
 
 \end{frame}

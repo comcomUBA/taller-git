@@ -1,0 +1,65 @@
+
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=white,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+
+\title{Taller de Git}
+\author{ComCom}
+\institute{DC - FCEyN - UBA}
+\date{11/03/2016}
+
+% http://latexcolor.com/
+\definecolor{lightseagreen}{rgb}{0.13, 0.7, 0.67}
+\definecolor{tangelo}{rgb}{0.98, 0.3, 0.0}
+\definecolor{git}{rgb}{0.94, 0.309, 0.2}
+
+\setbeamercolor{structure}{fg=lightseagreen}
+
+\newenvironment{ejercicio}[1]{
+% \setbeamercolor{block title}{bg=tangelo, fg=white}
+\begin{exampleblock}{#1}
+}{
+\end{exampleblock}
+}
+
+\newenvironment{resumen}[1]{
+\setbeamercolor{block title}{bg=git, fg=white}
+\begin{block}{#1}
+}{
+\end{block}
+}
+
+\newenvironment{comando}{
+\setbeamercolor{block body}{bg=git, fg=white}
+\begin{block}{}
+\begin{center}
+\LARGE
+\begin{texttt}
+}{
+\end{texttt}
+\end{center}
+\end{block}
+}

@@ -1,21 +1,56 @@
-\begin{frame}[fragile]{Viendo los cambios preparados}
-    Muchas veces es conveniente ver cuales son los cambios realizados antes de mandarlos a Preparado.
-    Para esto tenemos el comando \texttt{git diff}, que muestra las diferencias entre lo que hay en
-    tu directorio de trabajo con lo que hay en tu área de preparación.
+\begin{frame}[t]{Otros comandos útiles}
+    \begin{comando}
+        git rm
+    \end{comando}
 
-    \vspace{1em}
+    \only<2->{
+        \begin{block}{}
+            Permite borrar un archivo y marcarlo como \textit{preparado}. La sintaxis es \texttt{git rm [archivo]}
+        \end{block}
+    }
 
-    Si en cambio, queremos ver los cambios que preparamos y que irán en la próxima confirmación, podemos usar \texttt{git diff --staged}.
+    \vspace{2em}
 
+    \begin{comando}
+        git mv
+    \end{comando}
+
+    \only<3->{
+        \begin{block}{}
+            Permite mover/renombrar un archivo y marcarlo como \textit{preparado}. La sintaxis es \texttt{git mv [archivo] [nuevo nombre/ubicación]}
+        \end{block}
+    }
 \end{frame}
 
-\begin{frame}{Viendo la historia de los commits}
+\begin{frame}[t]{Inspeccionando los cambios}
+    \begin{comando}
+        git diff
+    \end{comando}
 
-    Después de haber hecho varios \textit{commits}, o si acabamos de clonar un repositorio
-    de internet, puede que querramos ver el historial de commits para ver cuales
-    fueron las modificaciones que se hicieron. Esto se puede lograr utilizando el
-    comando \texttt{git log}.
+    \begin{block}{}
+        Muchas veces es conveniente ver cuales son los cambios realizados antes de marcarlos como \textit{preparados}.
 
+        Para esto tenemos el comando \texttt{git diff}, que muestra las diferencias entre lo que hay en
+        tu directorio de trabajo con lo que hay en tu área de preparación.
+
+        \vspace{1em}
+
+        Si en cambio, queremos ver los cambios que preparamos y que irán en la próxima confirmación, podemos usar \texttt{git diff --staged}.
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]{Viendo la historia de los commits}
+    \begin{comando}
+        git log
+    \end{comando}
+
+    \pause
+    \begin{block}{}
+        Después de haber hecho varios \textit{commits}, o si acabamos de clonar un repositorio
+        de internet, puede que querramos ver el historial de commits para ver cuales
+        fueron las modificaciones que se hicieron. Esto se puede lograr utilizando el
+        comando \texttt{git log}.
+    \end{block}
 \end{frame}
 
 \begin{frame}{Ramificaciones en Git}

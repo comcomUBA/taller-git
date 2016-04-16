@@ -27,6 +27,7 @@
         git diff
     \end{comando}
 
+    \pause
     \begin{block}{}
         Muchas veces es conveniente ver cuales son los cambios realizados antes de marcarlos como \textit{preparados}.
 
@@ -55,29 +56,40 @@
 
 \begin{frame}[t]{Ramificaciones en Git}
 
-    Git es distribuido
+    % Git es distribuido
 
-    Cada vez que realizamos una confirmación (commit), Git almacena entre otras cosas uno o varios punteros a las confirmaciones que
-    sean padres directos de esta.
+    Una rama en Git representa una linea independiente de desarrollo.
+    Al crear nuevas ramas, podemos pensar que nuestro proyecto se diverge en dos distintos:
+    los cambios que hagamos en uno no impactan al otro.
 
-    Una rama o branch en Git no es más que un puntero especial parado en un commit. Ejecutar \texttt{git branch} nos mostrará las ramas actuales. Veamos un ejemplo sencillo:
+    \pause
+    \vspace{0.5em}
+    Un ejemplo visual:
 
-    %\begin{columns}
-    %    \column{0.5\textwidth}
-    %    \begin{figure}[ht]
-    %        \begin{center}
-    %            \includegraphics[height=1.1in]{images/branch-and-history.png}
-    %        \end{center}
-    %        \caption{La rama ``master'' apunta al commit \textit{f30ab}}
-    %    \end{figure}
-    %    \column{0.5\textwidth}
-    %    \begin{figure}[ht]
-    %        \begin{center}
-    %            \includegraphics[height=1.1in]{images/head-to-master.png}
-    %        \end{center}
-    %        \caption{Creamos una nueva rama ejecutando \texttt{git branch testing}}
-    %    \end{figure}
-    %\end{columns}
+    \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[height=1.5in]{images/branch.png}
+        \end{center}
+    \end{figure}
+
+    % \only<3-3>{
+    %     \begin{figure}[ht]
+    %         \begin{center}
+    %             \includegraphics[height=1.5in]{images/branch-1.png}
+    %         \end{center}
+    %         \caption{La rama ``master'' apunta al commit \textit{f30ab}}
+    %     \end{figure}
+    % }
+    %
+    % \only<4-4>{
+    %     \begin{figure}[ht]
+    %         \begin{center}
+    %             \includegraphics[height=1.5in]{images/branch-2.png}
+    %         \end{center}
+    %         \caption{Creamos una nueva rama llamada ``testing''}
+    %     \end{figure}
+    % }
+
 
     % Ademas de tener ramas locales, podemos tenemos ramas remotas, que referencian al estado de ramas en tus repositorios remotos.
     % Si por ejemplo quisieramos saltar a la rama ``master'' en el repositorio remoto ``origin'' podríamos utilizar el comando \texttt{git checkout origin/master}.
@@ -99,6 +111,14 @@
         git branch
     \end{comando}
 
+    \pause
+    \begin{block}{}
+        Para crear una rama nueva, podemos ejecutar \texttt{git branch [nombre de la rama]}.
+
+        Notese que este comando no nos mueve a la nueva rama, sólo la crea.
+    \end{block}
+
+
 \end{frame}
 
 \begin{frame}[t]{Cambiando de rama}
@@ -106,18 +126,31 @@
         git checkout
     \end{comando}
 
-    %\begin{figure}[ht]
-    %    \begin{center}
-    %        \includegraphics[height=1in]{images/head-to-testing.png}
-    %    \end{center}
-    %    \caption{Si queremos cambiar de rama, podemos ejecutar \texttt{git checkout testing}}
-    %\end{figure}
-    %\begin{figure}[ht]
-    %    \begin{center}
-    %        \includegraphics[height=1in]{images/advance-testing.png}
-    %    \end{center}
-    %    \caption{Y los siguientes commits serán agregados a la rama ``testing''}
-    %\end{figure}
+    \pause
+    \begin{block}{}
+        Para cambiar de rama, podemos ejecutar \texttt{git checkout [nombre de la rama]}.
+    \end{block}
+
+    \pause
+    \vspace{0.5em}
+    Un ejemplo visual:
+    \only<3-3>{
+        \begin{figure}[ht]
+            \begin{center}
+                \includegraphics[height=1.3in]{images/head-to-testing.png}
+            \end{center}
+            \caption{Acá cambiamos a la rama ``testing'' ejecutando \texttt{git checkout testing}}
+        \end{figure}
+    }
+
+    \only<4-4>{
+        \begin{figure}[ht]
+            \begin{center}
+                \includegraphics[height=1.3in]{images/advance-testing.png}
+            \end{center}
+            \caption{Y los siguientes commits serán agregados a la rama ``testing''}
+        \end{figure}
+    }
 
 \end{frame}
 
@@ -126,27 +159,36 @@
         git merge
     \end{comando}
 
-    \begin{block}{}
-        Supongamos que tenemos una rama ``iss53'' en la cual hemos terminado de arreglar un error, y queremos combinarla con la rama ``master''.
-        Para ello, simplemente nos paramos en ``master'' (\texttt{git checkout master}) y ejecutamos: \texttt{git merge iss53}.
-    \end{block}
+    \pause
+    \only<2-2>{
+        \begin{block}{}
+            Nos permite fusionar las historias de 2 ramas distintas (podría haber conflictos).
 
-        \only<2-2> {
-        	\begin{figure}[ht]
-        		\begin{center}
-        			\includegraphics[height=1.2in]{images/merge-1.png}
-        		\end{center}
-        		\caption{Antes del merge}
-        	\end{figure}
-        }
-        \only<3-3> {
-            \begin{figure}[ht]
-        		\begin{center}
-        			\includegraphics[height=1.2in]{images/merge-2.png}
-        		\end{center}
-        		\caption{Después del merge}
-        	\end{figure}
-        }
+            La sintaxis es: \texttt{git merge [nombre de la rama a fusionar]}.
+
+            \textbf{Importante:} este comando fusiona la rama que le decimos
+            \textbf{en la rama en la que estemos parados}.
+        \end{block}
+    }
+
+    \pause
+    Un ejemplo visual:
+    \only<3-3> {
+    	\begin{figure}[ht]
+    		\begin{center}
+    			\includegraphics[height=1.5in]{images/merge-1.png}
+    		\end{center}
+    		\caption{Antes del merge}
+    	\end{figure}
+    }
+    \only<4-4> {
+        \begin{figure}[ht]
+    		\begin{center}
+    			\includegraphics[height=1.5in]{images/merge-2.png}
+    		\end{center}
+    		\caption{Después de pararnos en la rama ``master'' (\texttt{git checkout master}) y haber fusionado la rama ``iss53'' \texttt{git merge iss53}}
+    	\end{figure}
+    }
 \end{frame}
 
 \begin{frame}[t]{A practicar!}
@@ -194,7 +236,13 @@
     \end{block}
 \end{frame}
 
-\begin{frame}[t]{Extras}
+\begin{frame}[t]{Extras: .gitignore}
+
+    Explicar .gitignore
+
+\end{frame}
+
+\begin{frame}[t]{Extras: comandos}
 
     \begin{itemize}
         \item \texttt{git fetch [remote repository]}: para traer todos los datos de un repositorio remoto.
@@ -206,6 +254,28 @@
 
 \end{frame}
 
+\begin{frame}[t]{Extras: servidores}
+
+    \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[height=0.7in]{images/github.png}
+        \end{center}
+    \end{figure}
+
+    \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[height=0.5in]{images/bitbucket.png}
+        \end{center}
+    \end{figure}
+
+    \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[height=0.7in]{images/gitlab.png}
+        \end{center}
+    \end{figure}
+
+\end{frame}
+
 \begin{frame}[t]{Bibliografía}
 
     \begin{itemize}
@@ -213,7 +283,6 @@
 		\item \texttt{git help [command]} para ver la documentación de cualquier comando de Git.
 		\item A visual Git reference: \url{http://marklodato.github.io/visual-git-guide/index-es.html}
 		\item Try Git online: \url{https://try.github.io}
-        \item Git - SVN Crash Course: \url{https://git-scm.com/course/svn.html}
     \end{itemize}
 
 \end{frame}

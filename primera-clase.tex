@@ -105,13 +105,7 @@
 \end{frame}
 
 \begin{frame}[t]{Obteniendo un repositorio Git}
-%    \begin{block}{Inicializando un repositorio en un directorio existente}
-%        Para crear un nuevo repositorio local podemos ir al directorio y ejecutar
-%        \texttt{git init}. Esto crea un subdirectorio \textit{.git} que tiene todos
-%        los archivos necesarios del repositorio.
-%    \end{block}
 
-%    \begin{block}{Clonando un repositorio existente}
     \begin{comando}
         git clone
     \end{comando}
@@ -140,6 +134,7 @@
 
     \pause
     \begin{block}{}
+        Una vez que tenemos cambios hechos, tenemos que marcalos como \textit{preparados} (o listos) antes de confirmarlos.
         \begin{enumerate}
             \item Creamos/Modificamos el archivo en cuestión.
             \item Ejecutamos \texttt{git add [nombre del archivo]}
@@ -163,8 +158,10 @@
 
     \pause
     \begin{block}{}
-        Una vez que tenemos \textit{preparados} los cambios a confirmar,
-        ejecutamos\\ \texttt{git commit -m [mensaje]}.
+        Una vez que tenemos \textit{preparados} ciertos cambios, podemos confirmarlos
+        ejecutando \texttt{git commit -m [mensaje]}.
+
+        \vspace{0.5em}
 
         Dónde [mensaje] índica al que lea eso cuales fueron los cambios que acabamos de confirmar.
     \end{block}
@@ -174,6 +171,17 @@
     \begin{ejercicio}{Ejercicio}
         Confirmar los cambios que \textit{prepararon} en la diapo anterior.
     \end{ejercicio}
+
+\end{frame}
+
+\begin{frame}[t]{No seas vago con los mensajes!}
+
+    \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[height=2in]{images/xkcd-git-commit.png}
+        \end{center}
+        \caption{Fuente: \url{https://xkcd.com/1296/}}
+    \end{figure}
 
 \end{frame}
 
@@ -187,21 +195,27 @@
         Las modificaciones que hacemos pueden estar en \textbf{3 estados} distintos:
         \begin{itemize}
             \pause
-            \item<2-> \textbf{Modificado (modified)}: las modificaciones todavía no están \textit{preparadas o listas}.
-            \item<3-> \textbf{Preparado (staged)}: las modificaciones están marcadas como \textit{preparadas o listas} e
-                irán en la proxima \textit{confirmación de cambios}.
-            \item<4-> \textbf{Confirmado (committed)}: las modifiaciones están guardadas con un \textit{mensaje} que explica los cambios realizados.
+            \only<-2>{\item \textbf{Modificado (modified)}: las modificaciones todavía no están \textit{preparadas o listas}.}
+            \only<3-3>{\item \textbf{Preparado (staged)}: las modificaciones están marcadas como \textit{preparadas o listas} e
+                irán en la proxima \textit{confirmación de cambios}.}
+            \only<4-4>{\item \textbf{Confirmado (committed)}: las modifiaciones están guardadas con un \textit{mensaje} que explica los cambios realizados.}
         \end{itemize}
     \end{block}
 
     \only<2> {
-        \gitstatusmodified
+        \begin{block}{Output de ejemplo}
+            \gitstatusmodified
+        \end{block}
     }
     \only<3> {
-        \gitstatusready
+        \begin{block}{Output de ejemplo}
+            \gitstatusready
+        \end{block}
     }
     \only<4> {
-        \gitstatusclean
+        \begin{block}{Output de ejemplo}
+            \gitstatusclean
+        \end{block}
     }
 
 \end{frame}
@@ -212,7 +226,11 @@
     de Internet. Puede haber varios, cada uno de los cuales
     puede ser de sólo lectura, o de lectura/escritura, según los permisos que tengamos.
 
-    \vspace{0.5em}
+    \begin{figure}[ht]
+        \begin{center}
+            \includegraphics[height=1in]{images/repo-remoto.png}
+        \end{center}
+    \end{figure}
 
     Colaborar con otros implica gestionar estos repositorios remotos, y mandar (\textbf{push}) y recibir (\textbf{pull})
     datos de ellos cuando necesites compartir cosas.
@@ -224,12 +242,14 @@
         git push
     \end{comando}
 
+    \pause
     \begin{block}{}
-        \begin{itemize}
-            \item
-            \item
-            \item
-        \end{itemize}
+        Para enviar los cambios \textbf{desde nuestro repositorio local a algún
+        repositorio remoto}, ejecutamos: \texttt{git push [remoto] [branch]}
+
+        \vspace{0.5em}
+
+        Por ahora, hasta la siguiente clase, vamos a usarlo como:\\ \texttt{git push origin master}
     \end{block}
 \end{frame}
 
@@ -237,10 +257,36 @@
     \begin{comando}
         git pull
     \end{comando}
+
+    \pause
+    \begin{block}{}
+        Para traer cambios \textbf{desde un repositorio remoto a nuestro repositorio local},
+        ejecutamos: \texttt{git pull [remoto] [branch]}
+
+        \vspace{0.5em}
+
+        Igual que antes, hasta la siguiente clase, vamos a usarlo como:\\ \texttt{git pull origin master}
+    \end{block}
 \end{frame}
 
 \begin{frame}[t]{Y qué pasa sí.. BOOM}
-    A veces hay conflictos.
+
+    \begin{block}{A veces hay conflictos}
+        \begin{itemize}
+            \item Supongamos que dos personas (👨 y 👩) están trabajando en un mismo proyecto.
+                Es decir, ambos tienen una \textit{copia} en su máquina.
+            \pause
+            \item Ahora imaginemos, por ejemplo, que 👨 modifica el archivo \texttt{README} en la linea 23
+                y confirma los cambios.
+            \pause
+            \item Sin saberlo, 👩 también modifica el archivo \texttt{README} en la linea 23, pero pone algo distinto y confirma dichos cambios.
+            \pause
+            \item ¿Qué va a pasar cuando quieran compartir lo que hicieron?\\ \only<6->{Va a haber un conflicto,
+                dos personas dicen algo distinto para una misma lniea.}
+            \pause
+            \item ¿Que va a hacer Git?\\ \only<7->{Se va a quejar. A alguno de los dos le va a tocar incorpar \textbf{a mano} los cambios del otro.}
+        \end{itemize}
+    \end{block}
 
 \end{frame}
 
@@ -248,6 +294,16 @@
     \begin{comando}
         git init
     \end{comando}
+
+    \pause
+    \begin{block}{}
+        Crea un repositorio local vacio. Un lienzo en blanco por así decirlo.
+        \begin{enumerate}
+            \item Nos paramos en el directorio que queremos convertir en un repositorio.
+            \item Ejecutamos \texttt{git init}
+        \end{enumerate}
+        Esto crea un subdirectorio \textit{.git} que tiene todos los archivos necesarios de Git.
+    \end{block}
 \end{frame}
 
 \begin{frame}[t]{Añadiendo un repositorio remoto}
@@ -255,14 +311,16 @@
         git remote
     \end{comando}
 
-    % Para ver qué repositorios remotos están configurados, podemos usar el comando \texttt{git remote}.
-    % Si acabamos de clonar el repositorio que tiene los fuentes de estas diapositivas y corremos \texttt{git remote -v}, veremos:
-    % \begin{verbatim}
-    % origin  git@github.com:FlyingPumba/git-intro.git (fetch)
-    % origin  git@github.com:FlyingPumba/git-intro.git (push)
-    % \end{verbatim}
-    %
-    % Y si tenemos un repositorio creado localmente y queremos añadir un remoto, usamos \texttt{git remote add [nombre] [url]}.
+    \vspace{0.5em}
+    \pause
+    \begin{block}{Ver los repositorios remotos asociados}
+        Ejecutamos \texttt{git remote -v}
+    \end{block}
+
+    \pause
+    \begin{block}{Agregar un repositorio remoto}
+        Ejecutamos \texttt{git remote add [nombre que querramos] [URL]}
+    \end{block}
 \end{frame}
 
 \begin{frame}[t]{A practicar !}

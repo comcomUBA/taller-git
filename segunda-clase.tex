@@ -250,9 +250,26 @@
     \end{block}
 \end{frame}
 
-\begin{frame}[t]{Extras: .gitignore}
+\begin{frame}[t]{Extras: Ignorando archivos}
 
-    Explicar .gitignore
+    \begin{block}{El archivo .gitignore}
+      Es común tener archivos generados automaticamente que no queremos agregar al repositorio. Por ejemplo, archivos compilados: .pdf, .exe, .log, .pyc, etc
+
+      Sin embargo es bastante molesto verlos todo el tiempo al ejecutar \texttt{git status}.
+
+      Para arreglar esto, podemos crear un archivo especial llamado \texttt{.gitignore} que le indica a Git que archivos ignorar por completo.
+    \end{block}
+
+    \pause
+    \begin{resumen}{}
+      Por ejemplo, para ignorar todos los archivos con extensión \textit{.pyc}:
+      \begin{enumerate}
+        \item Crear un archivo llamado \texttt{.gitignore} en el directorio principal del proyecto.
+        \item Y adentro escribir: \textit{*.pyc}
+      \end{enumerate}
+      Más ejemplos de \texttt{.gitignore}: \url{https://github.com/github/gitignore}
+    \end{resumen}
+
 
 \end{frame}
 

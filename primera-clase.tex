@@ -187,27 +187,33 @@
     \end{comando}
 
     \begin{block}{No es lo mismo!}
-        Las modificaciones que hacemos pueden estar en \textbf{3 estados} distintos:
+        Las modificaciones que hacemos pueden estar en \textbf{4 estados} distintos:
         \begin{itemize}
             \pause
-            \only<-2>{\item \textbf{Modificado (modified)}: las modificaciones todavía no están \textit{preparadas o listas}.}
-            \only<3-3>{\item \textbf{Preparado (staged)}: las modificaciones están marcadas como \textit{preparadas o listas} e
+            \only<-2>{\item \textbf{Sin seguimiento (untracked)}: archivos que nunca fueron agregados al repositorio, por ejemplo archivos nuevos.}
+            \only<3-3>{\item \textbf{Modificado (modified)}: las modificaciones todavía no están \textit{preparadas o listas}.}
+            \only<4-4>{\item \textbf{Preparado (staged)}: las modificaciones están marcadas como \textit{preparadas o listas} e
                 irán en la proxima \textit{confirmación de cambios}.}
-            \only<4-4>{\item \textbf{Confirmado (committed)}: las modifiaciones están guardadas con un \textit{mensaje} que explica los cambios realizados.}
+            \only<5-5>{\item \textbf{Confirmado (committed)}: las modifiaciones están guardadas con un \textit{mensaje} que explica los cambios realizados.}
         \end{itemize}
     \end{block}
 
     \only<2> {
         \begin{block}{Output de ejemplo}
-            \gitstatusmodified
+            \gitstatusuntracked
         \end{block}
     }
     \only<3> {
         \begin{block}{Output de ejemplo}
-            \gitstatusready
+            \gitstatusmodified
         \end{block}
     }
     \only<4> {
+        \begin{block}{Output de ejemplo}
+            \gitstatusready
+        \end{block}
+    }
+    \only<5> {
         \begin{block}{Output de ejemplo}
             \gitstatusclean
         \end{block}

@@ -2,7 +2,7 @@
   \titlepage
   \begin{figure}[ht]
       \begin{center}
-          \includegraphics[height=1in]{images/logo-taller.png}
+          \includegraphics[height=1in]{images/logo-taller.pdf}
       \end{center}
   \end{figure}
 \end{frame}
@@ -11,7 +11,7 @@
 
     \begin{figure}[ht]
         \begin{center}
-            \includegraphics[height=1.5in]{images/caos.png}
+            \includegraphics[height=1.5in]{images/caos.pdf}
         \end{center}
     \end{figure}
 
@@ -26,7 +26,7 @@
 
 \begin{frame}{Motivación 2/2}
 
-    \begin{block}{Trabajando de a grupo}
+    \begin{block}{Trabajando en grupo}
         \begin{itemize}
             \item Enviar cambios por mail, o
             \pause
@@ -48,19 +48,19 @@
 \begin{frame}{¿Qué es un Sistema de Control de Versiones?}
 
 	\begin{block}{}
-		Los Sistemas de Control de Versiones son una categoría de programas que permiten a un equipo manejar los cambios en el código fuente de un proyecto a lo largo del tiempo.
+		Los \textbf{Sistemas de Control de Versiones} son programas que permiten \textbf{manejar los cambios} en el código fuente de un proyecto a lo largo del tiempo.
 
-		Dichos programas llevan un seguimiento de las modificaciones que hacemos al código, y en caso de que nos equivoquemos en algo es posible volver a tras y comparar el código actual con otras versiones anteriores para ayudar a arreglar el error.
+		Llevan un \textbf{seguimiento} de las modificaciones que hacemos, y en caso de que nos equivoquemos, es posible volver atrás y comparar el código actual con versiones anteriores para ayudar a arreglar el error.
 
-		También, permiten que varias personas distintas del equipo modifiquen el código a la vez y compartan los cambios, tratando que prevenir posibles conflictos, y en caso de que los hubiera ayudando a identificarlos y resolverlos.
+		También permiten que distintas personas modifiquen el código a la vez y \textbf{compartan los cambios}, tratando de prevenir conflictos, y en caso de que los hubiera, ayudando a identificarlos y resolverlos.
 
 	\end{block}
 
     \pause
-    \begin{resumen}{Es decir..}
+    \begin{resumen}{Es decir, permiten...}
         \begin{itemize}
-            \item Permiten arreglar \textit{accidentes} y volver a versiones anteriores del código.
-            \item Permiten compartir código con otras personas.
+            \item Arreglar \textit{accidentes} y volver a versiones anteriores del código.
+            \item Compartir código con otras personas.
         \end{itemize}
 	\end{resumen}
 
@@ -70,21 +70,21 @@
 
 	\begin{block}{}
 		Git es un Sistema de Control de Versiones \textbf{distribuido y de código abierto}.
-        Además fue diseñado con enfasis en la \textbf{performance} (para manejar proyectos muy grandes), \textbf{seguridad} y \textbf{flexibilidad}.
+        Además fue diseñado con énfasis en la \textbf{performance} (para manejar proyectos muy grandes), \textbf{seguridad} y \textbf{flexibilidad}.
         Provee un amplio conjunto de comandos que permiten realizar operaciones de alto y bajo nivel.
 	\end{block}
 
     \begin{figure}[ht]
         \begin{center}
-            \includegraphics[height=1.5in]{images/logo-git.png}
+            \includegraphics[height=1.5in]{images/logo-git.pdf}
         \end{center}
     \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]{Configuraciones iniciales}
 
-	\begin{block}{Clave ssh}
-		Para poder trabajar comodamente con repositorios Git que estén en internet (GitHub, Bitbucket, GitLab, etc) podemos configurar una clave ssh que nos identifique con el servidor que estemos usando.
+	\begin{block}{Clave SSH}
+		Para poder trabajar cómodamente con repositorios Git que estén en Internet (GitHub, Bitbucket, GitLab, etc.), podemos configurar una \textbf{clave SSH} que nos identifique con el servidor que estemos usando.
 
         Por ejemplo, en GitLab:
 
@@ -92,13 +92,13 @@
 	\end{block}
 
     \begin{block}{Tu identidad}
-        Es importante establecer nuestro nombre y email ya que estos van a ir asociados con los cambios que hagamos:
+        Es importante establecer nuestro \textbf{nombre y email}, ya que estos van a ir asociados con los cambios que hagamos:
 
         \vspace{0.5em}
 
-        \texttt{git config --global user.name "John Doe"}
+        \texttt{git config --global user.name "Guybrush Threepwood"}
 
-        \texttt{git config --global user.email johndoe@example.com}
+        \texttt{git config --global user.email guybrush@example.com}
     \end{block}
 
 
@@ -113,7 +113,7 @@
     \pause
 	\begin{block}{}
         Para obtener una copia local de un repositorio existente en algún servidor,
-        utilizamos el comando \texttt{git clone [URL]} (sin los corchetes)
+        utilizamos el comando \texttt{git clone [URL]} (sin los corchetes).
     \end{block}
 
     \pause
@@ -122,7 +122,7 @@
         \textit{Clonar} el repositorio que tiene URL: \textbf{git@gitlab.com:talleres-comcom/taller-git.git}
 
         \vspace{0.5em}
-        Es un repositorio que tiene los fuentes\ \LaTeX\ de estas diapositivas !
+        ¡Es un repositorio que tiene los fuentes\ \LaTeX\ de estas diapositivas!
     \end{ejercicio}
 \end{frame}
 
@@ -133,10 +133,10 @@
 
     \pause
     \begin{block}{}
-        Una vez que tenemos cambios hechos, tenemos que marcalos como \textit{preparados} (o listos) antes de confirmarlos.
+        Una vez que tenemos cambios hechos, tenemos que marcarlos como \textit{preparados} (o listos) antes de confirmarlos.
         \begin{enumerate}
-            \item Creamos/Modificamos el archivo en cuestión.
-            \item Ejecutamos \texttt{git add [nombre del archivo]}
+            \item Creamos/modificamos el archivo en cuestión.
+            \item Ejecutamos \texttt{git add [nombre del archivo]}.
         \end{enumerate}
     \end{block}
 
@@ -160,7 +160,7 @@
 
         \vspace{0.5em}
 
-        Dónde [mensaje] índica al que lea eso cuales fueron los cambios que acabamos de confirmar.
+        Donde \texttt{[mensaje]} es una breve descripción de los cambios que acabamos de confirmar.
     \end{block}
 
     \pause
@@ -170,7 +170,7 @@
     \end{ejercicio}
 \end{frame}
 
-\begin{frame}[t]{No seas vago con los mensajes!}
+\begin{frame}[t]{¡No seas vago con los mensajes!}
 
     \begin{figure}[ht]
         \begin{center}
@@ -186,7 +186,7 @@
         git status
     \end{comando}
 
-    \begin{block}{No es lo mismo!}
+    \begin{block}{¡No es lo mismo!}
         Las modificaciones que hacemos pueden estar en \textbf{4 estados} distintos:
         \begin{itemize}
             \pause
@@ -194,7 +194,7 @@
             \only<3-3>{\item \textbf{Modificado (modified)}: las modificaciones todavía no están \textit{preparadas o listas}.}
             \only<4-4>{\item \textbf{Preparado (staged)}: las modificaciones están marcadas como \textit{preparadas o listas} e
                 irán en la proxima \textit{confirmación de cambios}.}
-            \only<5-5>{\item \textbf{Confirmado (committed)}: las modifiaciones están guardadas con un \textit{mensaje} que explica los cambios realizados.}
+            \only<5-5>{\item \textbf{Confirmado (committed)}: las modificaciones están guardadas con un \textit{mensaje} que explica los cambios realizados.}
         \end{itemize}
     \end{block}
 
@@ -224,11 +224,11 @@
 
     Los repositorios remotos son \textit{copias} de nuestro proyecto a las cuales accedemos a través
     de Internet. Puede haber varios, cada uno de los cuales
-    puede ser de sólo lectura, o de lectura/escritura, según los permisos que tengamos.
+    puede ser de solo lectura o de lectura/escritura, según los permisos que tengamos.
 
     \begin{figure}[ht]
         \begin{center}
-            \includegraphics[height=1.5in]{images/repo-remoto.png}
+            \includegraphics[height=1.5in]{images/repo-remoto.pdf}
         \end{center}
     \end{figure}
 
@@ -245,11 +245,11 @@
     \pause
     \begin{block}{}
         Para enviar los cambios \textbf{desde nuestro repositorio local a algún
-        repositorio remoto}, ejecutamos: \texttt{git push [remoto] [branch]}
+        repositorio remoto}, ejecutamos: \texttt{git push [remoto] [branch]}.
 
         \vspace{0.5em}
 
-        Por ahora, hasta la siguiente clase, vamos a usarlo como:\\ \texttt{git push origin master}
+        Por ahora, hasta la siguiente clase, vamos a usarlo como:\\ \texttt{git push origin master}.
     \end{block}
 \end{frame}
 
@@ -261,52 +261,52 @@
     \pause
     \begin{block}{}
         Para traer cambios \textbf{desde un repositorio remoto a nuestro repositorio local},
-        ejecutamos: \texttt{git pull [remoto] [branch]}
+        ejecutamos: \texttt{git pull [remoto] [branch]}.
 
         \vspace{0.5em}
 
-        Igual que antes, hasta la siguiente clase, vamos a usarlo como:\\ \texttt{git pull origin master}
+        Igual que antes, hasta la siguiente clase, vamos a usarlo como:\\ \texttt{git pull origin master}.
     \end{block}
 \end{frame}
 
-\begin{frame}[t]{Y qué pasa si.. BOOM}
+\begin{frame}[t]{Y qué pasa si... ¡BOOM!}
 
     \begin{block}{A veces hay conflictos}
         \begin{itemize}
             \item Supongamos que dos personas (👨 y 👩) están trabajando en un mismo proyecto.
                 Es decir, ambos tienen una \textit{copia} en su máquina.
             \pause
-            \item Ahora imaginemos, por ejemplo, que 👨 modifica el archivo \texttt{README} en la linea 23
+            \item Ahora imaginemos, por ejemplo, que 👨 modifica la línea 23 del archivo \texttt{README}
                 y confirma los cambios.
             \pause
-            \item Sin saberlo, 👩 también modifica el archivo \texttt{README} en la linea 23, pero pone algo distinto y confirma dichos cambios.
+            \item Sin saberlo, 👩 también modifica la línea 23 del archivo \texttt{README}, pero pone algo distinto y confirma dichos cambios.
             \pause
-            \item ¿Qué va a pasar cuando quieran compartir lo que hicieron?\\ \only<6->{\textbf{Va a haber un conflicto,
-                dos personas dicen algo distinto para una misma linea.}}
+            \item ¿Qué va a pasar cuando quieran compartir lo que hicieron?\\ \only<6->{\textbf{Va a haber un conflicto},
+                ya que dos personas modificaron de forma distinta la misma línea.}
             \pause
-            \item ¿Que va a hacer Git?\\ \only<7->{\textbf{Se va a quejar. A alguno de los dos le va a tocar incorpar a mano los cambios del otro.}}
+            \item ¿Qué va a hacer Git?\\ \only<7->{\textbf{Se va a quejar}. A alguno de los dos le va a tocar \textbf{incorporar a mano los cambios del otro}.}
         \end{itemize}
     \end{block}
 
 \end{frame}
 
-\begin{frame}[t]{Creando un repositorio vacio}
+\begin{frame}[t]{Creando un repositorio vacío}
     \begin{comando}
         git init
     \end{comando}
 
     \pause
     \begin{block}{}
-        Crea un repositorio local vacio. Un lienzo en blanco por así decirlo.
+        Crea un repositorio local vacío. Un lienzo en blanco, por así decirlo.
         \begin{enumerate}
             \item Nos paramos en el directorio que queremos convertir en un repositorio.
-            \item Ejecutamos \texttt{git init}
+            \item Ejecutamos \texttt{git init}.
         \end{enumerate}
         Esto crea un subdirectorio \textit{.git} que tiene todos los archivos necesarios de Git.
     \end{block}
 \end{frame}
 
-\begin{frame}[t]{Añadiendo un repositorio remoto}
+\begin{frame}[t]{Vinculando un repositorio remoto}
     \begin{comando}
         git remote
     \end{comando}
@@ -314,31 +314,31 @@
     \vspace{0.5em}
     \pause
     \begin{block}{Ver los repositorios remotos asociados}
-        Ejecutamos \texttt{git remote -v}
+        Ejecutamos \texttt{git remote -v}.
     \end{block}
 
     \pause
     \begin{block}{Agregar un repositorio remoto}
-        Ejecutamos \texttt{git remote add [nombre que querramos] [URL]}
+        Ejecutamos \texttt{git remote add [nombre que queramos] [URL]}.
     \end{block}
 \end{frame}
 
-\begin{frame}[t]{A practicar!}
+\begin{frame}[t]{¡A practicar!}
 
     \begin{ejercicio}{Ejercicio de a 2 máquinas (preferiblemente 2 personas): 👾 y 👽}
         \begin{enumerate}
             \pause
-            \item 👾 y 👽: crear un repositorio local vacio.
+            \item 👾 y 👽: crear un repositorio local vacío.
             \pause
-            \item 👾: crear un repositorio nuevo en \href{https://www.gitlab.com}{GitLab}
+            \item 👾: crear un repositorio nuevo en \href{https://www.gitlab.com}{GitLab}.
             \pause
             \item 👾 y 👽: asociar el repositorio remoto recién creado.
             \pause
-            \item 👾 y 👽: crear un archivo \textit{README} con contenidos distintos en la primera linea.
+            \item 👾 y 👽: crear un archivo \textit{README} con contenidos distintos en la primera línea.
             \pause
-            \item 👾: pushear los cambios al repositorio remoto.
+            \item 👾: \textit{pushear} los cambios al repositorio remoto.
             \pause
-            \item 👽: intentar pushear los cambios al repositorio remoto. ¿Qué pasó?
+            \item 👽: intentar \textit{pushear} los cambios al repositorio remoto. ¿Qué pasó?
             \pause
             \item 👽: bajarse los cambios del repositorio remoto. ¿Anduvo?
             \pause
@@ -346,7 +346,7 @@
             \pause
             \item 👽: añadir y confirmar el archivo que tenía conflicto.
             \pause
-            \item 👽: pushear estos nuevos cambios.
+            \item 👽: \textit{pushear} estos nuevos cambios.
             \pause
             \item 👾: bajarse los nuevos cambios.
         \end{enumerate}

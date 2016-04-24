@@ -157,4 +157,6 @@ pythontex-files-*/
 
 # Latexian
 TSWLatexianTemp*
-*.pdf
+
+# Compiled PDF files
+main.pdf

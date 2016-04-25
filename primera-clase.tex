@@ -119,10 +119,7 @@
     \pause
     \vspace{1em}
     \begin{ejercicio}{Ejercicio}
-        \textit{Clonar} el repositorio que tiene URL: \textbf{git@gitlab.com:talleres-comcom/taller-git.git}
-
-        \vspace{0.5em}
-        ¡Es un repositorio que tiene los fuentes\ \LaTeX\ de estas diapositivas!
+        \textit{Clonar} el repositorio que tiene URL: \textbf{git@gitlab.com:talleres-comcom/taller-git-prueba.git}
     \end{ejercicio}
 \end{frame}
 
@@ -133,7 +130,7 @@
 
     \pause
     \begin{block}{}
-        Una vez que tenemos cambios hechos, tenemos que marcarlos como \textit{preparados} (o listos) antes de confirmarlos.
+        Una vez que tenemos cambios hechos, tenemos que marcarlos como preparados antes de confirmarlos. En la jerga de Git, decimos que pasamos los cambios a \textit{staged}.
         \begin{enumerate}
             \item Creamos/modificamos el archivo en cuestión.
             \item Ejecutamos \texttt{git add [nombre del archivo]}.
@@ -144,7 +141,7 @@
     \vspace{1em}
     \begin{ejercicio}{Ejercicio}
         Adentro del repositorio que \textit{clonaron} recién, crear un archivo y
-        marcarlo como \textit{preparado} usando el comando \texttt{git add}.
+        marcarlo como \textit{staged} usando el comando \texttt{git add}.
     \end{ejercicio}
 \end{frame}
 
@@ -155,7 +152,7 @@
 
     \pause
     \begin{block}{}
-        Una vez que tenemos \textit{preparados} ciertos cambios, podemos confirmarlos
+        Una vez que tenemos ciertos cambios en \textit{staged}, podemos confirmarlos
         ejecutando \texttt{git commit -m [mensaje]}.
 
         \vspace{0.5em}
@@ -166,7 +163,7 @@
     \pause
     \vspace{1em}
     \begin{ejercicio}{Ejercicio}
-        Confirmar los cambios que \textit{prepararon} en la diapo anterior.
+        Confirmar los cambios que pasaron a \textit{staged} en la diapo anterior.
     \end{ejercicio}
 \end{frame}
 
@@ -191,9 +188,9 @@
         \begin{itemize}
             \pause
             \only<-2>{\item \textbf{Sin seguimiento (untracked)}: archivos que nunca fueron agregados al repositorio, por ejemplo archivos nuevos.}
-            \only<3-3>{\item \textbf{Modificado (modified)}: las modificaciones todavía no están \textit{preparadas o listas}.}
-            \only<4-4>{\item \textbf{Preparado (staged)}: las modificaciones están marcadas como \textit{preparadas o listas} e
-                irán en la proxima \textit{confirmación de cambios}.}
+            \only<3-3>{\item \textbf{Modificado (modified)}: las modificaciones todavía no están marcadas como \textit{staged}.}
+            \only<4-4>{\item \textbf{Preparado (staged)}: las modificaciones están en \textit{staged} e
+                irán en la próxima \textit{confirmación de cambios} (\textit{commit}).}
             \only<5-5>{\item \textbf{Confirmado (committed)}: las modificaciones están guardadas con un \textit{mensaje} que explica los cambios realizados.}
         \end{itemize}
     \end{block}
@@ -326,19 +323,20 @@
 \begin{frame}[t]{¡A practicar!}
 
     \begin{ejercicio}{Ejercicio de a 2 máquinas (preferiblemente 2 personas): 👾 y 👽}
-        \begin{enumerate}
+        \begin{enumerate}\begin{small}
             \pause
             \item 👾 y 👽: crear un repositorio local vacío.
             \pause
-            \item 👾: crear un repositorio nuevo en \href{https://www.gitlab.com}{GitLab}.
+            \item 👾: crear un repositorio nuevo en \href{https://www.gitlab.com}{GitLab},
+            y darle permiso a 👽 para hacer \textit{push}.
             \pause
             \item 👾 y 👽: asociar el repositorio remoto recién creado.
             \pause
             \item 👾 y 👽: crear un archivo \textit{README} con contenidos distintos en la primera línea.
             \pause
-            \item 👾: \textit{pushear} los cambios al repositorio remoto.
+            \item 👾: hacer \textit{push} de los cambios al repositorio remoto.
             \pause
-            \item 👽: intentar \textit{pushear} los cambios al repositorio remoto. ¿Qué pasó?
+            \item 👽: intentar hacer \textit{push} de los cambios al repositorio remoto. ¿Qué pasó?
             \pause
             \item 👽: bajarse los cambios del repositorio remoto. ¿Anduvo?
             \pause
@@ -349,7 +347,7 @@
             \item 👽: \textit{pushear} estos nuevos cambios.
             \pause
             \item 👾: bajarse los nuevos cambios.
-        \end{enumerate}
+        \end{small}\end{enumerate}
     \end{ejercicio}
 
 \end{frame}

@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="801.33234"
-   height="467.27805"
-   viewBox="0 0 801.33234 467.27805"
+   width="1393.387"
+   height="934.45001"
+   viewBox="0 0 1393.387 934.45002"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="drawings_branches.svf.svg">
+   sodipodi:docname="drawings_branches.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="641.76133"
-     inkscape:cy="-92.410901"
+     inkscape:zoom="0.7"
+     inkscape:cx="396.56279"
+     inkscape:cy="440.94374"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -58,7 +58,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(3.7857056,-125.16406)">
+     transform="translate(3.7857056,-109.70539)">
     <g
        id="g6208">
       <path
@@ -389,7 +389,7 @@
       <path
          sodipodi:nodetypes="csccscc"
          inkscape:connector-curvature="0"
-         d="m 103.33149,1316.3938 c -15.096451,0 -27.334541,-12.0699 -27.334541,-26.9591 1e-5,-14.8889 12.2381,-26.959 27.334541,-26.959 l 19.97271,0 c 15.09643,0 27.33453,12.07 27.33453,26.959 0,14.8892 -12.23809,26.9591 -27.33453,26.9591 z"
+         d="m 103.33149,1316.2383 c -15.096451,0 -27.334541,-12.0699 -27.334541,-26.9591 1e-5,-14.8889 12.2381,-26.959 27.334541,-26.959 l 19.97271,0 c 15.09643,0 27.33453,12.07 27.33453,26.959 0,14.8892 -12.23809,26.9591 -27.33453,26.9591 z"
          style="opacity:1;fill:none;fill-opacity:1;stroke:#f44d27;stroke-width:12;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.42000002"
          id="path5782" />
       <path
@@ -401,7 +401,7 @@
       <path
          id="path5780"
          style="opacity:1;fill:none;fill-opacity:1;stroke:#f44d27;stroke-width:12;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.42000002"
-         d="m -50.503139,1316.3938 c -15.09645,0 -27.33454,-12.0699 -27.33454,-26.9591 10e-6,-14.8889 12.2381,-26.959 27.33454,-26.959 l 19.972708,0 c 15.09643,0 27.3345304,12.07 27.3345304,26.959 0,14.8892 -12.2380904,26.9591 -27.3345304,26.9591 z"
+         d="m -50.503139,1316.2383 c -15.09645,0 -27.33454,-12.0699 -27.33454,-26.9591 10e-6,-14.8889 12.2381,-26.959 27.33454,-26.959 l 19.972708,0 c 15.09643,0 27.3345304,12.07 27.3345304,26.959 0,14.8892 -12.2380904,26.9591 -27.3345304,26.9591 z"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="csccscc" />
       <path
@@ -416,7 +416,7 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cscc" />
       <g
-         transform="matrix(0.84329388,0,0,0.82510845,-247.59351,468.86175)"
+         transform="matrix(0.84329388,0,0,0.82510845,-247.59351,468.70621)"
          id="g5663">
         <path
            id="path5665"
@@ -439,7 +439,7 @@
              sodipodi:role="line">C0</tspan></text>
       </g>
       <g
-         transform="matrix(0.84329386,0,0,0.82510845,-259.7068,468.86175)"
+         transform="matrix(0.84329386,0,0,0.82510845,-259.7068,468.70621)"
          id="g5671">
         <path
            sodipodi:nodetypes="csccscc"
@@ -462,7 +462,7 @@
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.17186356px;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans';text-align:center;text-anchor:middle">C1</tspan></text>
       </g>
       <g
-         transform="matrix(0.84329384,0,0,0.82510845,-126.50683,469.87189)"
+         transform="matrix(0.84329384,0,0,0.82510845,-126.50683,468.70621)"
          id="g5679">
         <path
            sodipodi:nodetypes="csccscc"
@@ -487,7 +487,7 @@
       <path
          sodipodi:nodetypes="csccscc"
          inkscape:connector-curvature="0"
-         d="m -50.503139,1316.3938 c -15.09645,0 -27.33454,-12.0699 -27.33454,-26.9591 10e-6,-14.8889 12.2381,-26.959 27.33454,-26.959 l 19.972708,0 c 15.09643,0 27.3345304,12.07 27.3345304,26.959 0,14.8892 -12.2380904,26.9591 -27.3345304,26.9591 z"
+         d="m -50.503139,1316.2383 c -15.09645,0 -27.33454,-12.0699 -27.33454,-26.9591 10e-6,-14.8889 12.2381,-26.959 27.33454,-26.959 l 19.972708,0 c 15.09643,0 27.3345304,12.07 27.3345304,26.959 0,14.8892 -12.2380904,26.9591 -27.3345304,26.9591 z"
          style="opacity:1;fill:#b3e3ff;fill-opacity:1;stroke:#000000;stroke-width:4.00000048;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path5689" />
       <text
@@ -631,22 +631,16 @@
          x="281.08185"
          style="font-style:normal;font-weight:normal;font-size:61.58199692px;line-height:100%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
+           id="tspan5798"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:100%;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans';text-align:start;text-anchor:start"
            y="1367.6772"
            x="281.08185"
-           sodipodi:role="line"
-           id="tspan5790"><tspan
-   id="tspan5796"
-   style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans Oblique'">Commit</tspan> a<tspan
-   id="tspan5794"
-   style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans Oblique'"></tspan></tspan><tspan
-           id="tspan5798"
+           sodipodi:role="line">Confirmación</tspan><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:100%;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans';text-align:start;text-anchor:start"
            y="1390.1772"
            x="281.08185"
-           sodipodi:role="line"><tspan
-             id="tspan5800"
-             style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans Oblique'">mergear</tspan></tspan></text>
+           sodipodi:role="line"
+           id="tspan4348">a fusionar</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:61.58199692px;line-height:100%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -654,20 +648,21 @@
          y="1284.8201"
          id="text5802"
          sodipodi:linespacing="100%"><tspan
-           id="tspan5804"
            sodipodi:role="line"
            x="173.22469"
            y="1284.8201"
-           style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:100%;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans Oblique';text-align:start;text-anchor:start">Commit<tspan
-   id="tspan5824"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans'"> sobre</tspan></tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:100%;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans';text-align:start;text-anchor:start"
+           id="tspan5810">Confirmación sobre la que</tspan><tspan
            sodipodi:role="line"
            x="173.22469"
            y="1307.3201"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:100%;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans';text-align:start;text-anchor:start"
+           id="tspan4356">se aplicarán los cambios</tspan><tspan
+           sodipodi:role="line"
+           x="173.22469"
+           y="1329.8201"
            style="font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:100%;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans Oblique';text-align:start;text-anchor:start"
-           id="tspan5810"><tspan
-   id="tspan5826"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Latin Modern Sans';-inkscape-font-specification:'Latin Modern Sans'">el cual </tspan>mergear</tspan></text>
+           id="tspan4350" /></text>
     </g>
     <g
        id="g6053"
@@ -1080,7 +1075,7 @@
       </g>
       <g
          id="g5245"
-         transform="matrix(0.84329384,0,0,0.82510845,670.63602,465.8923)">
+         transform="matrix(0.84329384,0,0,0.82510845,670.63602,464.88216)">
         <path
            id="path5247"
            style="opacity:1;fill:#b3e3ff;fill-opacity:1;stroke:#000000;stroke-width:4.79529142;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1102,7 +1097,7 @@
              sodipodi:role="line">C4</tspan></text>
       </g>
       <g
-         transform="matrix(1.0109887,0,0,1,332.78901,68.506289)"
+         transform="matrix(1.0109887,0,0,1,332.78901,68.506278)"
          id="g5415">
         <path
            sodipodi:nodetypes="csccscc"
@@ -1171,7 +1166,7 @@
              sodipodi:role="line">C5</tspan></text>
       </g>
       <g
-         transform="matrix(-1.0109887,0,0,1,2131.5234,68.506289)"
+         transform="matrix(-1.0109887,0,0,1,2131.5234,68.506278)"
          id="g5420">
         <path
            id="path5375"

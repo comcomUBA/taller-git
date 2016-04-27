@@ -231,7 +231,60 @@
 \end{frame}
 
 \begin{frame}[t]{¡A practicar!}
-    Ejercicio largo de branches (no interactivo)
+
+    \pause
+    \begin{block}{Pero antes de empezar...}
+        Para hacer el siguiente ejercicio, vamos a trabajar con un \textbf{fork} de un repositorio.
+        \pause\textit{¿Y eso?}
+
+        \pause
+        El concepto de \textit{fork} no es propio de Git. En el ámbito del desarrollo de software,
+        el término se refiere a un proyecto que surge a partir de otro, y adopta un curso de
+        desarrollo independiente.
+
+        \pause
+        Los servidores de Git, como GitLab, nos permiten hacer \textit{fork} de proyectos. Al hacer
+        esto creamos una copia de un repositorio ajeno en nuestra propia cuenta, sobre la cual
+        podemos trabajar libremente. Los cambios que hagamos en nuestra copia \textbf{no} impactarán
+        en el repositorio original.
+    \end{block}
+
+    \pause
+    \begin{center}
+    \Large Ahora sí...
+    \end{center}
+\end{frame}
+
+\begin{frame}[t]{¡A practicar!}
+    \begin{ejercicio}{Ejercicio de a 2 máquinas (preferiblemente 2 personas): 👾 y 👽}
+        \begin{enumerate}\begin{scriptsize}
+            \pause
+            \item 👽: Hacer un \textit{fork} en su cuenta de \href{https://www.gitlab.com}{GitLab}
+            de este repositorio: \href{https://www.gitlab.com/talleres-comcom/taller-git-ejercicio2}
+            {https://www.gitlab.com/talleres-comcom/taller-git-ejercicio2}, y darle permiso a 👽
+            para hacer \textit{push}.
+            \pause
+            \item 👾 y 👽: Obtener una copia local del repositorio de 👽.
+            \pause
+            \item 👾 y 👽: El repo tiene una única rama, ``master'', donde van a encontrar la letra,
+            incompleta, de \href{https://youtu.be/dDq0ne1xK3o}{una canción}. Repartirse el trabajo:
+            uno deberá completar la parte A y el otro, la parte B.
+            \pause
+            \item 👾 y 👽: Crear, cada uno, una rama propia donde harán sus modificaciones. Posicionarse
+            en la rama recién creada.
+            \pause
+            \item 👾 y 👽: Completar la parte elegida de la canción, y hacer \textit{push} de estos
+            cambios en el repositorio remoto.
+            \pause
+            \item 👾: Crear una nueva rama \textbf{a partir de ``master''}, y traerse (\textit{pull})
+            a esta rama los cambios de 👽.
+            \pause
+            \item 👾: Volver a su rama de trabajo y fusionar en ella los cambios de 👽. Enviar estos
+            cambios al repositorio remoto.
+            \pause
+            \item 👽: Seguir los dos pasos anteriores, pero con los cambios de 👾.
+        \end{scriptsize}\end{enumerate}
+    \end{ejercicio}
 
 \end{frame}
 
@@ -342,6 +395,10 @@
 \end{frame}
 
 \begin{frame}{Feedback}
+
+    \begin{center}
+        \includegraphics[height=1.5in]{images/octocat-comcom.pdf}
+    \end{center}
 
     \begin{block}{¡Nos interesa saber que les pareció el taller!}
         Pueden completar el formulario: \url{http://goo.gl/forms/Xg9L1nUC9i}

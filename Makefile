@@ -3,7 +3,7 @@
 LATEX := pdflatex
 LATEXFLAGS := -interaction=nonstopmode
 
-PDFS := main.pdf
+PDFS := main_primera_clase.pdf main_segunda_clase.pdf
 
 all: $(PDFS)
 

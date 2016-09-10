@@ -265,23 +265,68 @@
             \pause
             \item 👾 y 👽: Obtener una copia local del repositorio de 👽.
             \pause
-            \item 👾 y 👽: El repo tiene una única rama, ``master'', donde van a encontrar la letra,
-            incompleta, de \href{https://youtu.be/dDq0ne1xK3o}{una canción}. Repartirse el trabajo:
-            uno deberá completar la parte A y el otro, la parte B.
-            \pause
+            \item 👾 y 👽: El repo tiene una única rama, ``master'', donde van a encontrar un fragmento incompleto,
+            de un cuento de Borges. Repartirse el trabajo: cada uno deberá completar un parrafo.
+            \only<5>{\item[4] 👾 y 👽: Crear, cada uno, una rama propia donde harán sus modificaciones. Posicionarse
+            en la rama recién creada.
+
+            \begin{figure}[ht]
+                \begin{center}
+                    \includegraphics[height=1.2in]{images/branch.pdf}
+                \end{center}
+                \caption{Grafico que muestra que el emoji asteroid se creo un branch parrafo1 y está parado ahí, y el emoji alien idem pero con branch parrafo 2}
+            \end{figure}
+            }
+            \only<6>{\item[5] 👾 y 👽: Completar la parte elegida del cuento, y hacer \textit{push} de estos
+            cambios en el repositorio remoto.
+
+            \begin{figure}[ht]
+                \begin{center}
+                    \includegraphics[height=1.2in]{images/branch.pdf}
+                \end{center}
+                \caption{muestra, para alguno de los dos emojis, que el branch que creo avanzó con un commit}
+            \end{figure}
+            }
+            \only<7>{\item[6] 👾: Crear una nueva rama \textbf{a partir de ``master''} con el nombre que 👽 usó para
+            la suya, y traerse (\textit{pull}) a esta rama los cambios de 👽.
+
+            \begin{figure}[ht]
+                \begin{center}
+                    \includegraphics[height=1.2in]{images/branch.pdf}
+                \end{center}
+                \caption{acá habría que mostrar que la nueva branch (parrafo2) primero está vacia y después tiene el commit que hizo el otro}
+            \end{figure}
+            }
+            \only<8>{\item[7] 👾: Volver a su rama de trabajo y fusionar en ella los cambios de 👽. Enviar estos
+            cambios al repositorio remoto.
+
+            \begin{figure}[ht]
+                \begin{center}
+                    \includegraphics[height=1.2in]{images/branch.pdf}
+                \end{center}
+                \caption{primero muestra que está parado en parrafo1, y después de mergear tiene el commit de parrafo2 en parrafo1}
+            \end{figure}
+            }
+            \only<9>{\item[8] 👽: Seguir los dos pasos anteriores, pero con los cambios de 👾.
+
+            \begin{figure}[ht]
+                \begin{center}
+                    \includegraphics[height=1.2in]{images/branch.pdf}
+                \end{center}
+                \caption{acá no sé si vale la pena poner o no imagen}
+            \end{figure}
+            }
+            \only<10>{
             \item 👾 y 👽: Crear, cada uno, una rama propia donde harán sus modificaciones. Posicionarse
             en la rama recién creada.
-            \pause
-            \item 👾 y 👽: Completar la parte elegida de la canción, y hacer \textit{push} de estos
+            \item 👾 y 👽: Completar la parte elegida del cuento, y hacer \textit{push} de estos
             cambios en el repositorio remoto.
-            \pause
             \item 👾: Crear una nueva rama \textbf{a partir de ``master''} con el nombre que 👽 usó para
             la suya, y traerse (\textit{pull}) a esta rama los cambios de 👽.
-            \pause
             \item 👾: Volver a su rama de trabajo y fusionar en ella los cambios de 👽. Enviar estos
             cambios al repositorio remoto.
-            \pause
             \item 👽: Seguir los dos pasos anteriores, pero con los cambios de 👾.
+            }
         \end{scriptsize}\end{enumerate}
     \end{ejercicio}
 

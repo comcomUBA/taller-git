@@ -84,14 +84,6 @@
 
 \begin{frame}[fragile]{Configuraciones iniciales}
 
-	\begin{block}{Clave SSH}
-		Para poder trabajar cómodamente con repositorios Git que estén en Internet (GitHub, Bitbucket, GitLab, etc.), podemos configurar una \textbf{clave SSH} que nos identifique con el servidor que estemos usando.
-
-        Por ejemplo, en GitLab:
-
-        \url{http://doc.gitlab.com/ce/gitlab-basics/create-your-ssh-keys.html}
-	\end{block}
-
     \begin{block}{Tu identidad}
         Es importante establecer nuestro \textbf{nombre y email}, ya que estos van a ir asociados con los cambios que hagamos:
 
@@ -102,6 +94,28 @@
         \texttt{git config --global user.email guybrush@example.com}
     \end{block}
 
+\end{frame}
+
+\begin{frame}[fragile]{Configuraciones iniciales}
+
+	\begin{block}{Clave SSH}
+		Para poder trabajar cómodamente con repositorios Git que estén en Internet (GitHub, Bitbucket, GitLab, etc.), podemos configurar una \textbf{clave SSH} que nos identifique con el servidor que estemos usando.
+	\end{block}
+
+  \pause
+  \begin{block}{Creando una clave nueva}
+		Abrimos la terminal y ejecutamos \code{ssh-keygen}. Le damos \textit{Enter} a todo.
+	\end{block}
+
+  \pause
+  \begin{block}{Subiendo la clave a GitLab}
+		\begin{itemize}
+		  \item En la terminal, ejecutamos \code{cd ~/.ssh}, y luego \code{cat id\_rsa.pub}. Copiamos todo lo que aparezca.
+      \item Abrimos GitLab, vamos a Profile Settings, SSH Keys.
+      \item Pegamos lo que habíamos copiado en el campo \textit{Key}, y le ponemos un \textit{Title}, como por ejemplo \textit{Notebook del abuelo}.
+      \item Le damos al boton \textit{Add key}.
+		\end{itemize}
+	\end{block}
 
 \end{frame}
 
@@ -296,12 +310,12 @@
 
     \begin{block}{¿Qué hago?}
         \begin{itemize}
-        \item Decido cómo tiene que quedar el archivo final  
+        \item Decido cómo tiene que quedar el archivo final
         \pause
         \item Hago add
 		\pause
         \item
-        Despues commit normalmente, con un mensaje como 'Merge' 
+        Despues commit normalmente, con un mensaje como 'Merge'
         \end{itemize}
     \end{block}
 

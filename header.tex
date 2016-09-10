@@ -19,6 +19,8 @@
 \usepackage{hyperref}
 \usepackage{coloremoji} % for emojis
 \usepackage{caption}
+\usepackage{listings}
+\usepackage{realboxes}
 \captionsetup[figure]{labelformat=empty}
 
 \hypersetup{
@@ -39,6 +41,9 @@
 \definecolor{git}{rgb}{0.94, 0.309, 0.2}
 
 \setbeamercolor{structure}{fg=lightseagreen}
+
+\definecolor{x11gray}{rgb}{0.75, 0.75, 0.75}
+\newcommand{\code}[1]{\Colorbox{x11gray}{\lstinline{#1}}}
 
 \newenvironment{ejercicio}[1]{
 % \setbeamercolor{block title}{bg=tangelo, fg=white}

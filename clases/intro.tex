@@ -1,0 +1,73 @@
+\input{header}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+  \begin{figure}[ht]
+      \begin{center}
+          \includegraphics[height=1in]{images/logo-taller.png}
+      \end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{La Shell}
+\begin{block}{¿Qué es?}
+    \begin{itemize}
+        \item Interactuamos con la computadora a través de una interfaz.
+        \pause
+        \item Puede ser gráfica (GUI).
+            \begin{figure}
+            \begin{minipage}{.5\textwidth}
+              \includegraphics[width=.8\linewidth]{images/windows-gui.png}
+            \end{minipage}%
+            \begin{minipage}{.5\textwidth}
+              \includegraphics[width=.8\linewidth]{images/ubuntu-gui.jpg}
+            \end{minipage}
+            \end{figure}
+        \pause
+        \item O de línea de comando (CLI).
+    \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{La Shell (2)}
+    \begin{block}{¿Qué es? (2)}
+        \begin{itemize}
+                \item Bash \hookrightarrow\ \textit{Bourne-Again SHell}
+            \pause
+            \item Para abrir un \textit{shell prompt,} necesitamos una terminal.
+            \pause
+        \end{itemize}
+    \begin{centering}
+    \includegraphics[height=1.5in]{images/bash-1.png}        
+    \end{centering}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}{La Shell (3)}
+% But how does the shell know how to find the date or echo programs? Well, the shell is a programming environment, just like Python or Ruby, and so it has variables, conditionals, loops, and functions (next lecture!). When you run commands in your shell, you are really writing a small bit of code that your shell interprets. If the shell is asked to execute a command that doesn’t match one of its programming keywords, it consults an environment variable called $PATH that lists which directories the shell should search for programs when it is given a command:
+    \begin{block}{¿Cómo se usa?}
+        \centering
+        \includegraphics[width=4.5in]{images/bash-2.png}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}{La Shell (4)}
+\begin{block}{Navegando la Shell}
+        \vspace{-0.3cm}
+        \centering
+        \includegraphics[width=4in]{images/bash-3.png}
+\end{block}
+\end{frame}
+
+\begin{frame}{La Shell (5)}
+\begin{block}{Conectando programas}
+        \centering
+        \includegraphics[width=4in]{images/bash-4.png}
+\end{block}
+\end{frame}
+
+\end{document}

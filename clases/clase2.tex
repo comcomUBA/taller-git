@@ -1,185 +1,79 @@
-% !TeX document-id = {2870843d-1baa-4f6a-bd0a-a5c796104a32}
-% !BIB TS-program = biber
-% !TeX encoding = UTF-8
-% TU Delft beamer template
+% \begin{frame}[t]{Recapitulando}
+%     \pause
+%     \begin{comando}
+%             \texttt{git status}
+%     \end{comando}
 
-\documentclass[]{beamer}
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage{calc}
-\usepackage[absolute,overlay]{textpos}
-\usepackage{graphicx}
-\usepackage{subfig}
-\usepackage{mathtools}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-\usepackage{comment}
-\usepackage{siunitx}
-\usepackage{MnSymbol,wasysym}
-\usepackage{array}
-\usepackage{emoji}
+%     \vspace{.4em}
 
-\setemojifont{TwemojiMozilla}
+%     \begin{columns}[t]
+%         \begin{column}{0.05\textwidth}
 
-\setbeamertemplate{navigation symbols}{} % remove navigation symbols
-\mode<presentation>{\usetheme[verticalbar=false]{tud}}
+%         \end{column}
+%         \begin{column}{0.90\textwidth}
+%             \pause
+%             \hspace{-.25em}\texttt{Changes to be commited:}
 
-% BIB SETTINGS
-\usepackage[
-    backend=biber,
-    giveninits=true,
-    maxnames=30,
-    maxcitenames=20,
-    uniquename=init,
-    url=false,
-    style=authoryear,
-]{biblatex}
-\addbibresource{bibfile.bib}
-\setlength\bibitemsep{0.3cm} % space between entries in the reference list
-\renewcommand{\bibfont}{\normalfont\scriptsize}
-\setbeamerfont{footnote}{size=\tiny}
-\renewcommand{\cite}[1]{\footnote<.->[frame]{\fullcite{#1}}}
-\setlength{\TPHorizModule}{\paperwidth}
-\setlength{\TPVertModule}{\paperheight}
+%             \pause
+%             \begin{block}{La clase anterior, aprendimos cómo:}
+%                 \begin{itemize}
+%                     \pause
+%                     \item Obtener una copia local de un repositorio (\texttt{git\alt<-5>{...}{ clone}}).
+%                     \pause\pause
+%                     \item Iniciar un repositorio vacío (\texttt{git\alt<-7>{...}{ init}}).
+%                     \pause\pause
+%                     \item Marcar cambios como preparados o \textit{staged} (\texttt{git\alt<-9>{...}{ add}}),
+%                     \pause\pause y confirmar estos cambios (\texttt{git\alt<-11>{...}{ commit}}).
+%                     \pause\pause
+%                     \item Ver el estado actual de nuestros cambios (\texttt{git\alt<-13>{...}{ status}}).
+%                     \pause\pause
+%                     \item Enviar nuestros cambios a un repositorio remoto (\texttt{git\alt<-15>{...}{ push}}) \pause\pause y
+%                     bajarnos los cambios a nuestro repositorio local (\texttt{git\alt<-17>{...}{ pull}}).
+%                     \pause\pause
+%                     \item Resolver los conflictos que pueden presentarse al trabajar de forma colaborativa.
+%                 \end{itemize}
+%             \end{block}
 
-\newcommand{\absimage}[4][0.5,0.5]{%
-	\begin{textblock}{#3}%width
-		[#1]% alignment anchor within image (centered by default)
-		(#2)% position on the page (origin is top left)
-		\includegraphics[width=#3\paperwidth]{#4}%
-\end{textblock}}
+%         \end{column}
+%         \begin{column}{0.05\textwidth}
 
-\newcommand{\mininomen}[2][1]{{\let\thefootnote\relax%
-	\footnotetext{\begin{tabular}{*{#1}{@{\!}>{\centering\arraybackslash}p{1em}@{\;}p{\textwidth/#1-2em}}}%
-	#2\end{tabular}}}}
+%         \end{column}
+%     \end{columns}
 
+% \end{frame}
 
-\title{Taller de Git}
-\author{ComCom}
-\institute{DC - FCEyN - UBA}
-
-% http://latexcolor.com/
-\definecolor{lightseagreen}{rgb}{0.13, 0.7, 0.67}
-\definecolor{tangelo}{rgb}{0.98, 0.3, 0.0}
-\definecolor{git}{rgb}{0.94, 0.309, 0.2}
-
-\setbeamercolor{structure}{fg=lightseagreen}
-
-\definecolor{x11gray}{rgb}{0.75, 0.75, 0.75}
-\newcommand{\code}[1]{\Colorbox{x11gray}{\lstinline{#1}}}
-
-\newenvironment{ejercicio}[1]{
-% \setbeamercolor{block title}{bg=tangelo, fg=white}
-\begin{exampleblock}{#1}
-}{
-\end{exampleblock}
-}
-
-\newenvironment{resumen}[1]{
-\setbeamercolor{block title}{bg=git, fg=white}
-\begin{block}{#1}
-}{
-\end{block}
-}
-
-\newenvironment{comando}{
-\setbeamercolor{block body}{bg=git, fg=white}
-\begin{block}{}
-\begin{center}
-\LARGE
-\begin{texttt}
-}{
-\end{texttt}
-\end{center}
-\end{block}
-}
-
-\begin{document}
-\begin{frame}
-  \titlepage
-  \begin{figure}[ht]
-      \begin{center}
-          \includegraphics[height=1in]{images/logo-taller.png}
-      \end{center}
-  \end{figure}
-\end{frame}
-
-\begin{frame}[t]{Recapitulando}
-    \pause
-    \begin{comando}
-            \texttt{git status}
-    \end{comando}
-
-    \vspace{.4em}
-
-    \begin{columns}[t]
-        \begin{column}{0.05\textwidth}
-
-        \end{column}
-        \begin{column}{0.90\textwidth}
-            \pause
-            \hspace{-.25em}\texttt{Changes to be commited:}
-
-            \pause
-            \begin{block}{La clase anterior, aprendimos cómo:}
-                \begin{itemize}
-                    \pause
-                    \item Obtener una copia local de un repositorio (\texttt{git\alt<-5>{...}{ clone}}).
-                    \pause\pause
-                    \item Iniciar un repositorio vacío (\texttt{git\alt<-7>{...}{ init}}).
-                    \pause\pause
-                    \item Marcar cambios como preparados o \textit{staged} (\texttt{git\alt<-9>{...}{ add}}),
-                    \pause\pause y confirmar estos cambios (\texttt{git\alt<-11>{...}{ commit}}).
-                    \pause\pause
-                    \item Ver el estado actual de nuestros cambios (\texttt{git\alt<-13>{...}{ status}}).
-                    \pause\pause
-                    \item Enviar nuestros cambios a un repositorio remoto (\texttt{git\alt<-15>{...}{ push}}) \pause\pause y
-                    bajarnos los cambios a nuestro repositorio local (\texttt{git\alt<-17>{...}{ pull}}).
-                    \pause\pause
-                    \item Resolver los conflictos que pueden presentarse al trabajar de forma colaborativa.
-                \end{itemize}
-            \end{block}
-
-        \end{column}
-        \begin{column}{0.05\textwidth}
-
-        \end{column}
-    \end{columns}
-
-\end{frame}
-
-\begin{frame}[t]{Recapitulando}
-\begin{comando}
-    \texttt{git status}
-\end{comando}
+% \begin{frame}[t]{Recapitulando}
+% \begin{comando}
+%     \texttt{git status}
+% \end{comando}
     
-    \vspace{.4em}
+%     \vspace{.4em}
 
-    \begin{columns}[t]
-        \begin{column}{0.05\textwidth}
+%     \begin{columns}[t]
+%         \begin{column}{0.05\textwidth}
 
-        \end{column}
-        \begin{column}{0.90\textwidth}
-            \hspace{-.25em}\texttt{Untracked files:}
+%         \end{column}
+%         \begin{column}{0.90\textwidth}
+%             \hspace{-.25em}\texttt{Untracked files:}
 
-            \pause
-            \begin{block}{Hoy vamos a ver:}
-                \begin{itemize}
-                    \item Comandos para mover y eliminar archivos.
-                    \item Comandos para inspeccionar cambios anteriores.
-                    \item Ramificaciones (o \textit{branches}).
-                    \item Algunos comandos un poco más avanzados.
-                    \item \textit{Bonus track}.
-                \end{itemize}
-            \end{block}
+%             \pause
+%             \begin{block}{Hoy vamos a ver:}
+%                 \begin{itemize}
+%                     \item Comandos para mover y eliminar archivos.
+%                     \item Comandos para inspeccionar cambios anteriores.
+%                     \item Ramificaciones (o \textit{branches}).
+%                     \item Algunos comandos un poco más avanzados.
+%                     \item \textit{Bonus track}.
+%                 \end{itemize}
+%             \end{block}
 
-        \end{column}
-        \begin{column}{0.05\textwidth}
+%         \end{column}
+%         \begin{column}{0.05\textwidth}
 
-        \end{column}
-    \end{columns}
+%         \end{column}
+%     \end{columns}
 
-\end{frame}
+% \end{frame}
 
 \begin{frame}[t]{Otros comandos útiles}
     \begin{comando}
@@ -610,5 +504,3 @@
     \end{block}
 
 \end{frame}
-
-\end{document}

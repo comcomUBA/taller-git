@@ -76,10 +76,8 @@
 
 \begin{block} {Otros ejemplos}
         \begin{itemize}
-        \item man
         \item touch
         \item curl
-        \item grep
         \item nano
         \item unzip
         \item mkdir
@@ -96,4 +94,34 @@
     % que bajen el archivo y le editen algo con nano
     % otro ejercicio que invoque un python usando nano, por ejemplo. o agregar comandos nuevos
     
+\end{frame}
+
+\begin{frame}{Ejercitando los comandos}
+
+\begin{ejercicio}{Ejercicio}
+    \begin{enumerate}
+        \item Creen una carpeta para el taller, en donde ustedes quieran. Puede ser en el escritorio. Asegúrense de situarse dentro de ella.
+        
+        Ejemplo: \textit{mkdir carpeta},      
+        \textit{cd carpeta}.
+        
+        Recuerden que la carpeta se creará en la dirección donde estén parados en la terminal. 
+        \pause
+        \item Usen curl para bajar el archivo en \href{https://bit.ly/taller-git-ej1}{bit.ly/taller-git-ej1}. 
+        
+        Ejemplo: \textit{curl -L "bit.ly/taller-git-ej1" > script.py}
+        \pause
+        \item Usen cat para ver el contenido del archivo. 
+        
+        Ejemplo: \textit{cat script.py}
+        \pause
+        \item Ejecuten el archivo haciendo \textit{python3 script.py}
+        \pause
+        \item Usando nano, cambien el comportamiento del programa para que imprima lo que ustedes quieran. 
+        
+        Ejemplo: \textit{nano script.py}
+        \pause
+        \item Vuelvan a ejecutar el archivo.
+    \end{enumerate}
+\end{ejercicio}
 \end{frame}

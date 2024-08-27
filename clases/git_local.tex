@@ -1,3 +1,4 @@
+
 \begin{frame}{Motivación 1/2}
 
     \begin{figure}[ht]
@@ -117,6 +118,22 @@
 % que es un repositorio?
 % capaz piensan que un proyecto es un documento y no una carpeta
 
+\begin{frame}{Repositorios}
+    \begin{block}{¿Qué es un repositorio?}
+    \begin{itemize}
+        \pause
+        \item La unidad básica donde guardaremos todos los elementos de nuestro proyecto.
+        \pause
+        \item Es un directorio o carpeta.
+        \pause
+        \item La idea es que nuestro proyecto, y todos los archivos que lo contengan, existan dentro de este repositorio.
+        \pause
+        \item Sabemos que una carpeta es un repositorio de git porque tiene dentro una subcarpeta \textit{.git}.
+    \end{itemize}
+
+    \end{block}
+\end{frame}
+
 
 \begin{frame}[t]{Creando un repositorio vacío}
     \begin{comando}
@@ -135,7 +152,7 @@
     \pause
     \begin{ejercicio}{Ejercicio}
     % decirles q los archivos y carpetas los hagan con bash
-        En el escritorio, creen una carpeta nueva con el nombre de su repositorio. Dentro de ella, ejecuten \texttt{git init}.
+        Muévanse a la carpeta del ejercicio anterior. Dentro de ella, ejecuten \texttt{git init}. Recuerden los comandos de bash \textit{cd, ls}.
     \end{ejercicio}
 \end{frame}
 \begin{frame}[fragile, t]{¿Está preparado, confirmado o ninguna de las dos?}
@@ -149,7 +166,7 @@
         \end{block}
     \pause
     \begin{ejercicio}{Ejercicio}
-        Crear un nuevo archivo en nuestro repositorio y ejecutar \textit{git status} y vean como cambia el mensaje.
+        Crear un nuevo archivo en nuestro repositorio y ejecutar \textit{git status} y vean como cambia el mensaje. Recuerden el comando \textit{touch}.
     \end{ejercicio}
 
 \end{frame}
@@ -165,7 +182,7 @@
             \end{center}
         \end{block}
 \begin{ejercicio}{Ejercicio}
-    Ejecuten el comando que les sugiere \textit{git} para incluír el archivo. Hagan \textit{git status}.
+    Ejecuten el comando que les sugiere \textit{git} para incluír el archivo que crearon recién. Hagan \textit{git status}.
 \end{ejercicio}
 \end{frame}
 
@@ -215,10 +232,11 @@
         \vspace{0.5em}
 
         Donde \texttt{[mensaje]} es una breve descripción de los cambios que acabamos de confirmar.
+        
+        \pause
+        Es como crear un checkpoint del estado del repositorio.
     \end{block}
 
-    \pause
-    \vspace{1em}
     \pause
     \begin{ejercicio}{Ejercicio}
         Hagan el \textit{commit} que venían preparando y elijan un mensaje. Luego hagan \textit{git status}.
@@ -253,9 +271,7 @@
      
  \end{block}
     \begin{ejercicio}{Ejercicio}
-        Fíjense quien es el autor de sus cambios anteriores...
-        
-        Después, hagan algún otro \texttt{commit} y miren que pasa.
+        Fíjense quien es el autor de sus cambios anteriores... \emoji{face-with-tears-of-joy}
     \end{ejercicio}
 \end{frame}
 
@@ -269,3 +285,21 @@
     \end{figure}
 
 \end{frame}
+
+\begin{frame}{Integrando los conceptos}
+\begin{ejercicio} {Ejercicio integrador}
+    \begin{enumerate}
+        \item En el repositorio donde venían trabajando, hagan add y commit al archivo de Python que usaron para el ejercicio 1.
+        \pause
+        \item Usando nano, cambien de nuevo el contenido del archivo para que imprima el día de hoy.
+        \pause
+        \item Hagan de nuevo add y commit, con un mensaje que refleje su modificación.
+        \pause
+        \item Para ver el estado final de su repo con un gráfico, 
+        
+        hagan \textit{git log - -graph}
+    \end{enumerate}
+\end{ejercicio}
+    
+\end{frame}
+

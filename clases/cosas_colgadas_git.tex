@@ -1,0 +1,87 @@
+\begin{frame}[t]{Recapitulando}
+    \begin{block}{La clase anterior, aprendimos cómo:}
+        \begin{itemize}
+        \pause
+            \item Iniciar un repositorio vacío (\texttt{git\alt<-2>{...}{ init}}).
+            \pause\pause
+            \item Marcar cambios como preparados o \textit{staged} (\texttt{git\alt<-4>{...}{ add}}), y confirmar estos cambios (\texttt{git\alt<-5>{...}{ commit}}).
+            \pause\pause\pause
+            \item Ver el estado actual de nuestros cambios (\texttt{git\alt<-7>{...}{ status}}).\pause
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}[t]{Otros comandos útiles}
+    \begin{comando}
+        git rm
+    \end{comando}
+
+    \uncover<2->{
+        \begin{block}{}
+            Permite borrar un archivo y marcar este cambio como \textit{staged}. La sintaxis es \texttt{git rm [archivo]}.
+        \end{block}
+    }
+
+    \vspace{2em}
+
+    \begin{comando}
+        git mv
+    \end{comando}
+
+    \uncover<3->{
+        \begin{block}{}
+            Permite mover/renombrar un archivo y marcar este cambio como \textit{staged}. La sintaxis es \texttt{git mv [archivo] [nuevo nombre/ubicación]}.
+        \end{block}
+    }
+\end{frame}
+
+
+\begin{frame}[t]{Inspeccionando los cambios}
+    \begin{comando}
+        git show
+    \end{comando}
+
+    \uncover<2->{
+        \begin{block}{}
+            Muestra el contenido del úlimo commit. Esto incluye tanto el contenido (adiciones, borrados, etc) como metadatos (fecha, autor).
+
+            Podemos pedirle que nos muestre el contenido de algún contenido específico puntual.
+        \end{block}
+    }
+
+    \begin{comando}
+        git diff
+    \end{comando}
+
+    \uncover<3->{
+        \begin{block}{}
+    
+        Muestra las diferencias entre el estado actual de los archivos y la última vez que hicimos \texttt{git add} (cambios marcados como \textit{staged}).
+
+        \vspace{.4em}
+
+        Si, en cambio, queremos ver las diferencias entre los cambios marcados como \textit{staged} y los
+        que confirmamos en el último \textit{commit}, podemos usar \texttt{git diff --staged}.
+        \end{block}
+    }
+\end{frame}
+
+\begin{frame}[t]{Viendo la historia de los \textit{commits}}
+    \begin{comando}
+        git log
+    \end{comando}
+
+    \pause
+    \begin{block}{}
+        Muestra el historial de \textit{commits}. 
+    \end{block}
+
+    \pause
+    \begin{ejercicio}{Ejercicio}
+        Ejecutar \texttt{git log} en algún repo de la clase pasada.
+    \end{ejercicio}
+
+    % mostrar algunas flags para logear distintas cosas
+    % git log -p
+\end{frame}

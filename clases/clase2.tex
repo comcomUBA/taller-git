@@ -87,73 +87,20 @@
 % git diff
 % commit, push, pull
 
-
-\begin{frame}[t]{Otros comandos útiles}
-    \begin{comando}
-        git rm
-    \end{comando}
-
-    \uncover<2->{
-        \begin{block}{}
-            Permite borrar un archivo y marcar este cambio como \textit{staged}. La sintaxis es \texttt{git rm [archivo]}.
-        \end{block}
-    }
-
-    \vspace{2em}
-
-    \begin{comando}
-        git mv
-    \end{comando}
-
-    \uncover<3->{
-        \begin{block}{}
-            Permite mover/renombrar un archivo y marcar este cambio como \textit{staged}. La sintaxis es \texttt{git mv [archivo] [nuevo nombre/ubicación]}.
-        \end{block}
-    }
-\end{frame}
-
-\begin{frame}[t]{Inspeccionando los cambios}
-    \begin{comando}
-        git diff
-    \end{comando}
-
-    \pause
-    \begin{block}{}
-
-        Muestra las diferencias entre el estado actual de los archivos y la última vez que hicimos \texttt{git add} (cambios marcados como \textit{staged}).
-
-        \vspace{.4em}
-
-        Si, en cambio, queremos ver las diferencias entre los cambios marcados como \textit{staged} y los
-        que confirmamos en el último \textit{commit}, podemos usar \texttt{git diff --staged}.
-    \end{block}
-
-    \pause
-    \begin{ejercicio}{Ejercicio}
-        Modificar un archivo de algún repo de la clase pasada y ejecutar \texttt{git diff}.
-    \end{ejercicio}
-\end{frame}
-
-\begin{frame}[t]{Viendo la historia de los \textit{commits}}
-    \begin{comando}
-        git log
-    \end{comando}
-
-    \pause
-    \begin{block}{}
-        Muestra el historial de \textit{commits}. Además de quién hizo cada cosa y cuándo.
-    \end{block}
-
-    \pause
-    \begin{ejercicio}{Ejercicio}
-        Ejecutar \texttt{git log} en algún repo de la clase pasada.
-    \end{ejercicio}
-\end{frame}
-
 % falta acá escribir algo de motivacion de por que usamos ramas
 % features distintas del mismo proyecto, probablemente en el mismo archivo
 % al terminar deberan hacer un merge, pero una sola vez
 
+% introducir conflictos
+% corto, ya practicamos bastante
+% ambos crean un archivo con el mismo nombre y distinto contenido.
+% intentan pushear  caos
+
+% por eso usamos branches
+
+% ejercicios
+% hay un jefe medio bobo que pushea todo en main mientras vos estabas trabajando. intentas hacer un push y no te deja, haces un pull y hay mil conflictos y no anda nada.
+% solucion: trabajar en tu rama, y si tu jefe pushea, no pasa nada.
 \begin{frame}[t]{Ramificaciones en Git}
 
     % Git es distribuido
@@ -174,15 +121,15 @@
 
 \end{frame}
 
-\begin{frame}{Conceptos claves}
-        \begin{itemize}
-            \item {\textit{main:} rama predeterminada que se crea automáticamente cuando se crea un repositorio.}
-            \pause
-            \item {\textit{origin:} nombre predeterminado que recibe el repositorio remoto principal contra el que trabajamos.}
-            \pause
-            \item {\textit{HEAD:} commit en el que está tu repositorio posicionado en cada momento.}
-        \end{itemize} 
-\end{frame}
+% \begin{frame}{Conceptos claves}
+%         \begin{itemize}
+%             \item {\textit{main:} rama predeterminada que se crea automáticamente cuando se crea un repositorio.}
+%             \pause
+%             \item {\textit{origin:} nombre predeterminado que recibe el repositorio remoto principal contra el que trabajamos.}
+%             \pause
+%             \item {\textit{HEAD:} commit en el que está tu repositorio posicionado en cada momento.}
+%         \end{itemize} 
+% \end{frame}
 
 \begin{frame}[t]{Creando ramas}
     \begin{comando}
@@ -304,14 +251,9 @@
         \pause\textit{¿Y eso?}
 
         \pause
-        El concepto de \textit{fork} no es propio de Git. En el ámbito del desarrollo de software,
-        el término se refiere a un proyecto que surge a partir de otro, y adopta un curso de
-        desarrollo independiente.
-
-        \pause
         Los servidores de Git, como GitLab, nos permiten hacer \textit{fork} de proyectos. Al hacer
         esto creamos una copia de un repositorio ajeno en nuestra propia cuenta, sobre la cual
-        podemos trabajar libremente. Los cambios que hagamos en nuestra copia \textbf{no} impactarán
+        tendremos todos los permisos para pushear libremente. Los cambios que hagamos en nuestra copia \textbf{no} impactarán
         en el repositorio original.
     \end{block}
 

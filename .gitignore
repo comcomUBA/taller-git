@@ -159,5 +159,4 @@ pythontex-files-*/
 TSWLatexianTemp*
 
 # Compiled PDF files
-*.pdf
 !emoji_images

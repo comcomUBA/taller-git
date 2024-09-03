@@ -64,12 +64,12 @@
 
 \begin{frame}{Configuraciones iniciales 2/3}
   \begin{block}{Creando una clave nueva}
-		Abrimos la terminal y ejecutamos \textit{cd \textasciitilde/.ssh} y luego \textit{ssh-keygen -f}. Le damos \textit{Enter} a todo. También podemos elegir asignarle una contraseña (aconsejable para compus compartidas).
+		Abrimos la terminal y ejecutamos \textit{cd \textasciitilde/.ssh} y luego \textit{ssh-keygen -f taller-git}. Le damos \textit{Enter} a todo. También podemos elegir asignarle una contraseña (aconsejable para compus compartidas).
 	\end{block}
   \pause
   \begin{block}{Subiendo la clave a GitLab}
 		\begin{itemize}
-		\item En la terminal, ejecutamos \textit{cat id_rsa.pub} y copiamos todo lo que aparezca.
+		\item En la terminal, ejecutamos \textit{cat taller-git.pub} y copiamos todo lo que aparezca.
       \item Abrimos GitLab, vamos a Profile Settings, SSH Keys.
       \item Pegamos lo que tenemos copiado en el campo \textit{Key}.
       \item Ponemos para que expire mañana y le damos al boton \textit{Add key}.

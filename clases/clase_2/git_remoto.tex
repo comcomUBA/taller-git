@@ -41,9 +41,17 @@
         \texttt{git config --global user.name "Guybrush Threepwood"}
 
         \texttt{git config --global user.email guybrush@example.com}
+    \end{block}
 
+    \begin{block}{Modo de pull}
+        Ejecuten esto (es una mauskiherramienta que nos ayudara mas tarde)
+        \texttt{git config --global pull.rebase false}
+    \end{block}
+
+    \begin{block}{Config global vs local}
     También se puede omitir el flag \texttt{--global} para que las credenciales apliquen solo al repositorio en el que estamos trabajando.
-        \end{block}
+    \end{block}
+
 \end{frame}
 \begin{frame}[fragile]{Configuraciones iniciales 2/3}
 
@@ -56,12 +64,12 @@
 
 \begin{frame}{Configuraciones iniciales 2/3}
   \begin{block}{Creando una clave nueva}
-		Abrimos la terminal y ejecutamos \textit{cd \textasciitilde/.ssh} y luego \textit{ssh-keygen -f taller-git}. Le damos \textit{Enter} a todo. También podemos elegir asignarle una contraseña (aconsejable para compus compartidas).
+		Abrimos la terminal y ejecutamos \textit{cd \textasciitilde/.ssh} y luego \textit{ssh-keygen -f id\_rsa}. Le damos \textit{Enter} a todo. También podemos elegir asignarle una contraseña (aconsejable para compus compartidas).
 	\end{block}
   \pause
   \begin{block}{Subiendo la clave a GitLab}
 		\begin{itemize}
-		\item En la terminal, ejecutamos \textit{cat taller-git.pub} y copiamos todo lo que aparezca.
+		\item En la terminal, ejecutamos \textit{cat id\_rsa.pub} y copiamos todo lo que aparezca.
       \item Abrimos GitLab, vamos a Profile Settings, SSH Keys.
       \item Pegamos lo que tenemos copiado en el campo \textit{Key}.
       \item Ponemos para que expire mañana y le damos al boton \textit{Add key}.
@@ -175,8 +183,8 @@
     \begin{ejercicio}{Ejercicio de a 2 máquinas (preferiblemente 2 personas): \emoji{christmas-tree} y \emoji{jack-o-lantern}}
         \begin{enumerate}\begin{small}
             \pause
-            \item \emoji{christmas-tree}: crear un repositorio nuevo en \href{https://www.gitlab.com}{GitLab},
-            y darle permiso a \emoji{jack-o-lantern} para hacer \textit{push}.
+            \item \emoji{christmas-tree}: crear un repositorio nuevo en \href{https://www.gitlab.com}{GitLab}, inicializando el README.md,
+            y darle permiso a \emoji{jack-o-lantern} para hacer \textit{push} (por lo menos \textit{Maintainer}).
             \pause
             \item \emoji{christmas-tree} y \emoji{jack-o-lantern}: obtener una copia local del repositorio usando \textit{git clone}.
 

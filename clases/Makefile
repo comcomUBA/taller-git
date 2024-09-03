@@ -32,3 +32,7 @@ main_clase_1.pdf: force-build
 main_clase_2.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_2:$(TEXINPUTS) \
 	lualatex clase_2/main_clase_2.tex
+
+main_clase_3.pdf: force-build
+	TEXINPUTS=$(PWD)/:$(PWD)/clase_3:$(TEXINPUTS) \
+	lualatex clase_3/main_clase_3.tex

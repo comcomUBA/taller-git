@@ -2,7 +2,8 @@
 .PHONY: all clean force-build
 
 # define default targets for `make
-all: presentation.pdf
+all: main_clase_2.pdf
+	# main_clase_1.pdf
 
 clean:
 	rm -f *.aux
@@ -24,8 +25,10 @@ clean:
 # below to be always executed.
 force-build:
 
-presentation.pdf: force-build
-	pdflatex presentation
-	biber presentation
-	pdflatex presentation
-	pdflatex presentation
+main_clase_1.pdf: force-build
+	TEXINPUTS=$(PWD)/:$(PWD)/clase_1:$(TEXINPUTS) \
+	lualatex clase_1/main_clase_1.tex
+
+main_clase_2.pdf: force-build
+	TEXINPUTS=$(PWD)/:$(PWD)/clase_2:$(TEXINPUTS) \
+	lualatex clase_2/main_clase_2.tex

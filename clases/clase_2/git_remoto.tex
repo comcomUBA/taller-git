@@ -39,7 +39,23 @@
         %De esta manera, cuando tengamos un repositorio en Gitlab vamos a poder conectarlo con nuestro local.
 	\end{block}
 \end{frame}
-\begin{frame}{Configuraciones iniciales}
+
+\begin{frame}[fragile]{Configuraciones iniciales 1/2}
+
+    \begin{block}{Tu identidad}
+        Es importante establecer nuestro \textbf{nombre y email} en nuestro repositorio, ya que estos van a ir asociados con los cambios que hagamos:
+
+        \vspace{0.5em}
+
+        \texttt{git config --global user.name "Guybrush Threepwood"}
+
+        \texttt{git config --global user.email guybrush@example.com}
+
+    También se puede omitir el flag \texttt{--global} para que las credenciales apliquen solo al repositorio en el que estamos trabajando.
+        \end{block}
+\end{frame}
+
+\begin{frame}{Configuraciones iniciales 2/2}
   \begin{block}{Creando una clave nueva}
 		Abrimos la terminal y ejecutamos \textit{cd \textasciitilde/.ssh} y luego \textit{ssh-keygen -f taller-git}. Le damos \textit{Enter} a todo. También podemos elegir asignarle una contraseña (aconsejable para compus compartidas).
 	\end{block}

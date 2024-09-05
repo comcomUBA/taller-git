@@ -1,13 +1,13 @@
-\begin{frame}{Git no decide nada}
-    \begin{block}{DISCLAIMER - Mundos paralelos}
-        Nos vamos a encontrar con varias situaciones donde git tiene que resolver que hacer frente a dos versiones "recientes" de un algo (archivo, repo, etc). Por ejemplo, repo local vs repo remoto, archivo commiteado vs archivo pusheado (por otra persona). Esto es complicado!
-    \end{block}
-
-    \pause
-
-    En la clase anterior, mencionamos que git es muy sencillo y no toma decisiones por nosotros. Vamos a ver un ejemplo claro de esto.
-
-\end{frame}
+% \begin{frame}{Git no decide nada}
+%     \begin{block}{DISCLAIMER - Mundos paralelos}
+%         Nos vamos a encontrar con varias situaciones donde git tiene que resolver que hacer frente a dos versiones "recientes" de un algo (archivo, repo, etc). Por ejemplo, repo local vs repo remoto, archivo commiteado vs archivo pusheado (por otra persona). Esto es complicado!
+%     \end{block}
+%
+%     \pause
+%
+%     En la clase anterior, mencionamos que git es muy sencillo y no toma decisiones por nosotros. Vamos a ver un ejemplo claro de esto.
+%
+% \end{frame}
 
 \begin{frame}[t]{Mandando fruta}
 
@@ -22,17 +22,13 @@
             \pause
             \item \emoji{grapes} y \emoji{pear}: hagan \textit{commits} (1 cada) agregando algunos nombres de frutas a su ensalada en la misma linea que "bowl".
             \pause
-            \item \emoji{grapes}: hacer \textit{push} con sus cambios.
+            \item \emoji{grapes}: hacer \textit{git push} con sus cambios.
             \pause
-            \item \emoji{pear}: intentar hacer \textit{push} de los cambios al repositorio remoto. ¿Qué pasó?
-            \pause
-            \item \emoji{pear}: bajarse los cambios del repositorio remoto con \textit{pull}. ¿Anduvo?
-            \pause
-            \item \emoji{pear}: resolver el conflicto (!) y pushear
+            \item \emoji{pear}: bajarse los cambios del repositorio remoto con \textit{git pull}. Resolver el conflicto (!) y pushear
             \pause
             \item \emoji{grapes}: bajarse los nuevos cambios.
             \pause
-            \item \emoji{grapes} y \emoji{pear}: repetir estos pasos con los roles invertidos si aun no lo hicieron.
+        \item \emoji{grapes} y \emoji{pear}: repetir estos pasos con los roles invertidos si aun no lo hicieron (en un nuevo archivo).
         \end{small}\end{enumerate}
     \end{ejercicio}
 

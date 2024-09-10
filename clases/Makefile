@@ -2,8 +2,7 @@
 .PHONY: all clean force-build
 
 # define default targets for `make
-all: main_clase_2.pdf
-	# main_clase_1.pdf
+all: main_clase_3.pdf
 
 clean:
 	rm -f *.aux
@@ -27,12 +26,12 @@ force-build:
 
 main_clase_1.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_1:$(TEXINPUTS) \
-	lualatex clase_1/main_clase_1.tex
+	latexmk -lualatex clase_1/main_clase_1.tex
 
 main_clase_2.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_2:$(TEXINPUTS) \
-	lualatex clase_2/main_clase_2.tex
+	latexmk -lualatex clase_2/main_clase_2.tex
 
 main_clase_3.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_3:$(TEXINPUTS) \
-	lualatex clase_3/main_clase_3.tex
+	latexmk -lualatex clase_3/main_clase_3.tex

@@ -1,3 +1,5 @@
+LATEX=latexmk -lualatex
+# LATEX=lualatex
 
 .PHONY: all clean force-build
 
@@ -35,4 +37,12 @@ main_clase_2.pdf: force-build
 
 main_clase_3.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_3:$(TEXINPUTS) \
-	lualatex clase_3/main_clase_3.tex
+	$(LATEX) clase_3/main_clase_3.tex
+
+YY=24
+CUAT=2
+images/feedback-$(YY)c$(CUAT).png:
+	echo https://bit.ly/git-comcom-feedback-$(CUAT)c20$(YY) | qrencode -t png -o $@
+
+qr: images/feedback-$(YY)c$(CUAT).png
+

@@ -1,0 +1,68 @@
+\begin{frame}[t]{Repaso: obteniendo un repositorio Git de otro lado}
+    \begin{comando}
+        git clone
+    \end{comando}
+
+    \begin{block}{}
+        Para obtener una \textbf{copia local} de un repositorio existente en algún servidor,
+        utilizamos el comando \texttt{git clone [URL]}. (hagan esto en el HOME, no en .ssh!)
+
+        En el caso de haber creado el repositorio con \textit{git init}, esto no es necesario. El comando \textit{clone} es como hacer \textit{init + remote add + pull}.
+    \end{block}
+    \begin{block}{}
+        Importante: \textit{git clone [URL]} crea un nuevo directorio con el
+        repositorio clonado. Debemos hacer \textit{cd <repo>} luego de clonarlo!
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]{Repaso: enviando cambios}
+    \begin{comando}
+        git push
+    \end{comando}
+
+    \pause
+    \begin{block}{}
+        Para enviar los cambios \textbf{desde nuestro repositorio local a algún
+        repositorio remoto}, ejecutamos \texttt{git push}.
+    \end{block}
+
+    % \begin{ejercicio}{Ejercicio}
+    %     Si tienen acceso al repo de la clase pasada, usen ese. Si no, pueden crear un nuevo usando los comandos que ya vimos. Asegúrense de hacer algún \textit{commit}. Luego hagan \textit{push}.
+    % \end{ejercicio}
+\end{frame}
+
+
+\begin{frame}[t]{Repaso: recibiendo cambios}
+    \begin{comando}
+        git pull
+    \end{comando}
+
+    \begin{block}{}
+        Para traer cambios \textbf{desde un repositorio remoto a nuestro repositorio local},
+        ejecutamos \texttt{git pull}.
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]{Repaso: repositorios remotos}
+    \begin{comando}
+        git remote
+    \end{comando}
+
+    \vspace{0.5em}
+    \pause
+    \begin{block}{Ver los repositorios remotos asociados}
+        Ejecutamos \texttt{git remote -v}. Si no hay ningun output, es que el repo no tiene ningún remote. Es decir, no apunta a ningún otro repo fuera del local.
+    \end{block}
+
+    \pause
+    \begin{block}{Agregar un repositorio remoto}
+        Ejecutamos \texttt{git remote add origin [URL]}. %chequear esto si funciona
+    \end{block}
+
+    \pause
+    \begin{block}{git clone ya lo hizo}
+        Si tenemos un repo que iniciamos con \texttt{git clone}, ya tenemos
+        configurado el \texttt{remote} llamado \texttt{origin} automaticamente.
+    \end{block}
+\end{frame}
+

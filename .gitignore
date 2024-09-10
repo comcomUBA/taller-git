@@ -158,5 +158,10 @@ pythontex-files-*/
 # Latexian
 TSWLatexianTemp*
 
+# flyer
+flyer/*
+
+
 # Compiled PDF files
 !emoji_images
+*.pdf

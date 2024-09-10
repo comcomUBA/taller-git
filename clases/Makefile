@@ -1,5 +1,3 @@
-# LATEX=latexmk -lualatex
-LATEX=lualatex
 
 .PHONY: all clean force-build
 
@@ -28,12 +26,12 @@ force-build:
 
 main_clase_1.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_1:$(TEXINPUTS) \
-	$(LATEX) clase_1/main_clase_1.tex
+	latexmk -lualatex clase_1/main_clase_1.tex
 
 main_clase_2.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_2:$(TEXINPUTS) \
-	$(LATEX) clase_2/main_clase_2.tex
+	latexmk -lualatex clase_2/main_clase_2.tex
 
 main_clase_3.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_3:$(TEXINPUTS) \
-	$(LATEX) clase_3/main_clase_3.tex
+	latexmk -lualatex clase_3/main_clase_3.tex

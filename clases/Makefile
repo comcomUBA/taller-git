@@ -4,7 +4,7 @@ LATEX=latexmk -lualatex
 .PHONY: all clean force-build
 
 # define default targets for `make
-all: main_clase_2.pdf
+all: main_clase_3.pdf
 	# main_clase_1.pdf
 
 clean:

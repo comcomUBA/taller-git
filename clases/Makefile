@@ -1,5 +1,5 @@
-# LATEX=latexmk -lualatex
-LATEX=lualatex
+LATEX=latexmk -lualatex
+# LATEX=lualatex
 
 .PHONY: all clean force-build
 

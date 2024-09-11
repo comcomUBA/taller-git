@@ -69,20 +69,38 @@
 
 \end{frame}
 
-\begin{frame}[t]{Ejercicio}
-    \begin{ejercicio}{}
-\begin{enumerate}
-    \item \emoji{dog}: Creá un archivo \textit{.md}, e incluílo en un commit nuevo, con un mensaje poco legible. Luego hagan push.
-    \item \emoji{cat}: Creá un archivo \textit{.txt}, e incluílo en un commit nuevo, con un mensaje poco legible. Luego hagan push.
-    \item \emoji{dog} y \emoji{cat}: pushear cambios y traerse los cambios de \emoji{cat} / \emoji{dog}.
-    \item \emoji{dog} y \emoji{cat}: Cambienle el texto al commit de la otra persona con uno que se entienda más.
-    \pause
-\item \emoji{dog}: creá un archivo .gitignore, y agregá para que se ignoren todos los archivos \textit{.txt}. 
-\item \emoji{cat}: creá un archivo .gitignore, y agregá para que se ignoren todos los archivos \textit{.md}. 
-\item \emoji{dog} y \emoji{cat}: modifiquen los archivos de más arriba. Hagan sus commits, luego ambos pusheen y pullen los cambios del otro.
-    ¿Qué paso?
-\end{enumerate}
-\end{ejercicio}
+\begin{frame}{Prueben los comandos que vimos recién}
+    \begin{ejercicio}{Ejercicio 1}
+    \begin{enumerate}
+        \item \emoji{dog} y \emoji{cat}: En el mismo repo de antes, sitúense en ramas diferentes.
+        \item \emoji{dog}: Creá un archivo \textit{.md}, e incluílo en un commit nuevo, con un mensaje poco legible.
+        \item \emoji{cat}: Creá un archivo \textit{.txt}, e incluílo en un commit nuevo, con un mensaje poco legible.
+        \item \emoji{dog} y \emoji{cat}: Pushear cambios (si tira un mensaje de error prueben hacer \texttt{git push -f}) y traerse los cambios del otro. 
+        \item \emoji{dog} y \emoji{cat}: Cambienle el texto al commit de la otra persona con uno que se entienda más. 
+        Recuerden el comando\\ \texttt{git commit --amend -m [nuevo mensaje]}.
+        \item \emoji{dog} y \emoji{cat}: Hagan push y pull, y vean como cambió su historial de commits.
+    \end{enumerate}
+    \end{ejercicio}
+\end{frame}
+
+\begin{frame}[t]{}
+    \small
+    \begin{ejercicio}{Ejercicio 2}
+    \begin{enumerate}
+        \item \emoji{dog}: En la rama \textit{master}, creá un archivo .gitignore, y agregá para que se ignoren todos los archivos \textit{.txt}. 
+        Esto se hace agregándole la linea \texttt{*.txt} al archivo .gitignore.
+        \item \emoji{cat}: En la rama \textit{master}, creá un archivo .gitignore, y agregá para que se ignoren todos los archivos \textit{.md}. 
+        \item \emoji{dog} y \emoji{cat}: modifiquen los archivos .txt y .md de más arriba. Agréguenlos a un commit, pero no incluyan al archivo .gitignore. Luego ambos pusheen y pullen los cambios del otro.
+        ¿Qué paso? Recuerden cada tanto ir haciendo \texttt{git status}.
+    \end{enumerate}
+    \end{ejercicio}
+    \small
+    \begin{resumen}{Un par de tips:}
+        \begin{itemize}
+            \item Recuerden que los archivos con un punto adelante de todo en el nombre son archivos ocultos y que no aparecen al hacer \texttt{ls}! Para verlos tienen que ejecutar \texttt{ls -a}.
+            \item También pueden agregar archivos puntuales al .gitignore. Fijense que pasa si agregan la línea '.gitignore', y hacen \texttt{git status}.
+        \end{itemize}
+    \end{resumen}
 \end{frame}
 
 \begin{frame}[t]{Extras: Más comandos}

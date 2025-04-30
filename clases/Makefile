@@ -4,7 +4,7 @@ LATEX=latexmk -lualatex
 .PHONY: all clean force-build
 
 # define default targets for `make
-all: main_clase_3.pdf
+all: main_clase_1.pdf main_clase_2.pdf main_clase_3.pdf
 	# main_clase_1.pdf
 
 clean:
@@ -39,10 +39,8 @@ main_clase_3.pdf: force-build
 	TEXINPUTS=$(PWD)/:$(PWD)/clase_3:$(TEXINPUTS) \
 	$(LATEX) clase_3/main_clase_3.tex
 
-YY=24
-CUAT=2
-images/feedback-$(YY)c$(CUAT).png:
-	echo https://bit.ly/git-comcom-feedback-$(CUAT)c20$(YY) | qrencode -t png -o $@
+images/feedback-form-qr.png:
+	echo https://forms.gle/8b82uYx1ZYbvKZQQA | qrencode -t png -o $@
 
-qr: images/feedback-$(YY)c$(CUAT).png
+qr: images/feedback-form-qr.png
 

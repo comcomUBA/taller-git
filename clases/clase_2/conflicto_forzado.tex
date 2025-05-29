@@ -34,6 +34,32 @@
 
 \end{frame}
 
+\newcommand{\prompt}[1]{{\color{tangelo}\$} \textbf{#1}}
+\begin{frame}[t, fragile=singleslide]{Ejemplo de resolución de conflicto}
+    \begin{figure}[ht]
+        \small
+        \begin{Verbatim}[commandchars=\\\{\}]
+\prompt{git pull}
+Auto-merging ensalada.txt
+CONFLICT (add/add): Merge conflict in ensalada.txt
+Automatic merge failed; fix conflicts and then commit the result
+\prompt{cat ensalada.txt}
+<<<<<<< HEAD
+bowl pera
+=======
+bowl manzana
+>>>>>>> a473efc136d4fadf4d29476088b64dcbc82e8c03
+\prompt{nano ensalada.txt}
+\prompt{cat ensalada.txt}
+bowl pera manzana
+\prompt{git add ensalada.txt}
+\prompt{git commit -m "unificar ensaladas"}
+[main 64a1772] unificar ensaladas
+\prompt{git push}
+        \end{Verbatim}
+    \end{figure}
+\end{frame}
+
 \begin{frame}[t]{Muy importante (?)}
     \begin{figure}[ht]
         \begin{center}

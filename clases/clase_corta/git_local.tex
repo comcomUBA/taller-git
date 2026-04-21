@@ -85,23 +85,24 @@
     
 \end{frame}
 
-\begin{frame}[t]{Creando un repositorio}
+\begin{frame}[t]{Trabajando con un repositorio}
     \begin{comando}
-        git init
+        git clone
     \end{comando}
 
-    \pause
     \begin{block}{}
-        Crea un repositorio local.
-        \begin{enumerate}
-            \item Nos paramos en el directorio que queremos convertir en un repositorio.
-            \item Ejecutamos \texttt{git init}.
-        \end{enumerate}
-        Esto crea un subdirectorio \textit{.git} que tiene todos los archivos necesarios de Git.
+        Para obtener una \textbf{copia local} de un repositorio existente en algún servidor,
+        utilizamos el comando \texttt{git clone [URL]}.
     \end{block}
+    \begin{block}{}
+        Importante: \textit{git clone [URL]} crea un nuevo directorio con el
+        repositorio clonado. Debemos hacer \textit{cd <repo>} luego de clonarlo!
+    \end{block}
+
     \pause
     \begin{ejercicio}{Ejercicio}
-        Creen un directorio o carpeta nueva. Dentro de ella, ejecuten \texttt{git init}. Recuerden los comandos de bash \textit{cd, ls, mkdir}.
+        Clonen el repositorio de prueba para el taller. Para eso pueden ejecutar \texttt{git clone https://git.cubawiki.com.ar/mlang/ejemplo}.
+        Después ejecuten \texttt{cd ejemplo} para situarse en el repositorio recién clonado.
     \end{ejercicio}
 \end{frame}
 
@@ -239,15 +240,6 @@
     \end{block}  
 \end{frame}
 
-\begin{frame}{Elige tu propia aventura}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.99\linewidth]{graficos/restore-add.png}
-    \caption{Nosotros decidimos que hacer con los nuevos cambios.
-    Los añadimos al stage con \textit{add}, o los rechazamos con \textit{restore}. Tener en cuenta que al rechazar los cambios, volvemos al estado del archivo en el último commit.}
-\end{figure}  
-\end{frame}
-
 \begin{frame}{Estados de un archivo}
 
     \begin{block}{Los cuatro estados de los archivos}
@@ -286,7 +278,7 @@
  \end{comando}
  \pause
  \begin{block}{}
-     Este comando nos sirve para ver el historial de cambios, o commits. Además nos dice quién hizo cada cosa, cuando, y su correo electrónico.
+     Este comando nos sirve para ver el historial de cambios, o commits. Además nos dice quién hizo cada cosa, cuándo, y su correo electrónico.
  \end{block}
  \pause
     \begin{figure}[ht]

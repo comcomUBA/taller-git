@@ -19,7 +19,7 @@
 \begin{block}{Git server as a service}
     Para subir nuestros proyectos a Internet, ya sea para colaborar con otras personas o para compartir nuestro código, podemos usar un servicio de servidor web de Git.
 
-    Los más conocidos son Github, Forgejo y Gitlab.
+    Los más conocidos son Github, Codeberg y Gitlab.
     \end{block}
     \begin{center}
         \includegraphics[width=3in]{images/forgejo-logo.png}
@@ -41,107 +41,10 @@
         Para obtener una \textbf{copia local} de un repositorio existente en algún servidor,
         utilizamos el comando \texttt{git clone [URL]}.
 
-        En el caso de haber creado el repositorio con \textit{git init}, esto no es necesario. El comando \textit{clone} es como hacer \textit{init + remote add + pull}.
+        En el caso de haber creado el repositorio con \texttt{git init}, esto no es necesario. El comando \texttt{clone} es como hacer \textit{init + remote add + pull}.
     \end{block}
     \begin{block}{}
-        Importante: \textit{git clone [URL]} crea un nuevo directorio con el
-        repositorio clonado. Debemos hacer \textit{cd <repo>} luego de clonarlo!
+        Importante: \texttt{git clone [URL]} crea un nuevo directorio con el
+        repositorio clonado. Debemos hacer \texttt{cd <repo>} luego de clonarlo!
     \end{block}
 \end{frame}
-
-% \begin{frame}[t]{Y qué pasa si... ¡BOOM!}
-
-%     \begin{block}{A veces hay conflictos}
-%         \begin{itemize}
-%             \item Supongamos que dos personas (\emoji{penguin} y \emoji{spouting-whale}) están trabajando en un mismo proyecto.
-%                 Es decir, ambos tienen una \textit{copia} en su máquina.
-%             \pause
-%             \item Ahora imaginemos, por ejemplo, que \emoji{penguin} modifica la línea 23 del archivo \texttt{README}
-%                 y confirma los cambios.
-%             \pause
-%             \item Sin saberlo, \emoji{spouting-whale} también modifica la línea 23 del archivo \texttt{README}, pero pone algo distinto y confirma dichos cambios.
-%             \pause
-%             \item ¿Qué va a pasar cuando quieran compartir lo que hicieron?\\ \only<6->{\textbf{Va a haber un conflicto},
-%                 ya que dos personas modificaron de forma distinta la misma línea.}
-%             \pause
-%             \item ¿Qué va a hacer Git?\\ \only<7->{\textbf{Se va a quejar}. A alguno de los dos le va a tocar \textbf{incorporar a mano los cambios del otro}.}
-%         \end{itemize}
-%     \end{block}
-
-% \end{frame}
-
-% \begin{frame}[t]{Apagando el incendio}
-
-%     \begin{block}{¿Cómo se ve un conflicto?}
-%         \includegraphics[height=1.0in]{images/conflicto.png}
-%     \end{block}
-
-%     \begin{block}{¿Qué hago?}
-%         \begin{itemize}
-%         \item Decido cómo tiene que quedar el archivo final (es decir, borro lo que quiera borrar manualmente).
-%         \pause
-%         \item Hago add.
-% 		\pause
-%         \item
-%         Despues commit normalmente, con un mensaje como 'Merge'.
-%         \end{itemize}
-%     \end{block}
-
-% \end{frame}
-
-
-%\begin{frame}[t]{Extra: vinculando un repositorio remoto}
-%    \begin{comando}
-%        git remote
-%    \end{comando}
-%
-%    \vspace{0.5em}
-%    \pause
-%    \begin{block}{Ver los repositorios remotos asociados}
-%        Ejecutamos \texttt{git remote -v}. Si no hay ningun output, es que el repo no tiene ningún remote. Es decir, no apunta a ningún otro repo fuera del local.
-%    \end{block}
-%
-%    \pause
-%    \begin{block}{Agregar un repositorio remoto}
-%        Ejecutamos \texttt{git remote add origin [URL]}. %chequear esto si funciona
-%    \end{block}
-%
-%    \pause
-%    \begin{block}{git clone ya lo hizo}
-%        Si tenemos un repo que iniciamos con \texttt{git clone}, ya tenemos
-%        configurado el \texttt{remote} llamado \texttt{origin} automaticamente.
-%    \end{block}
-%
-%    % mover el tutorial de ssh antes de esto
-%%     \begin{ejercicio}{Ejercicio}
-%%         Agréguenle un \textit{remote} a algún repo, por ejemplo el de la clase pasada. Para esto tienen que crear un repositorio nuevo en GitLab y obtener su URL SSH.
-%%     \end{ejercicio}
-%\end{frame}
-
-% \begin{frame}[t]{Enviando cambios}
-%     \begin{comando}
-%         git push
-%     \end{comando}
-% 
-%     \pause
-%     \begin{block}{}
-%         Para enviar los cambios \textbf{desde nuestro repositorio local a algún
-%         repositorio remoto}, ejecutamos \texttt{git push}.
-%     \end{block}
-% 
-%     \begin{ejercicio}{Ejercicio}
-%         Si tienen acceso al repo de la clase pasada, usen ese. Si no, pueden crear un nuevo usando los comandos que ya vimos. Asegúrense de hacer algún \textit{commit}. Luego hagan \textit{push}. 
-%     \end{ejercicio}
-% \end{frame}
-% 
-% 
-% \begin{frame}[t]{Obteniendo un repositorio Git}
-%     \begin{comando}
-%         git pull
-%     \end{comando}
-% 
-%     \begin{block}{}
-%         Para traer cambios \textbf{desde un repositorio remoto a nuestro repositorio local},
-%         ejecutamos \texttt{git pull}.
-%     \end{block}
-% \end{frame}

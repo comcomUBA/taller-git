@@ -10,11 +10,6 @@
         \texttt{git config --global user.email guybrush@example.com}
     \end{block}
 
-    % \begin{block}{Modo de pull}
-    %     Ejecuten esto (es una mauskiherramienta que nos ayudara mas tarde)
-    %     \texttt{git config --global pull.rebase false}
-    % \end{block}
-
     \begin{block}{Config global vs local}
     También se puede omitir el flag \texttt{--global} para que las credenciales apliquen solo al repositorio en el que estamos trabajando.
     \end{block}
@@ -23,7 +18,7 @@
 \begin{frame}[fragile]{Configuraciones iniciales 2/2}
 
 	\begin{block}{Autenticación con el servidor}
-        Para poder acceder al repositorio remoto, el servidor necesita saber si tenemos permisos para accederlo. Para eso, cada vez que ejecutemos \textit{git pull} o \textit{git push} vamos a tener que completar nuestro usuario y contraseña.
+        Para poder acceder al repositorio remoto, el servidor necesita saber si tenemos permisos para accederlo. Para eso, cada vez que ejecutemos \texttt{git pull} o \texttt{git push} vamos a tener que completar nuestro usuario y contraseña.
 
         %De esta manera, cuando tengamos un repositorio en Gitlab vamos a poder conectarlo con nuestro local.
 	\end{block}
@@ -34,23 +29,3 @@
         %De esta manera, cuando tengamos un repositorio en Gitlab vamos a poder conectarlo con nuestro local.
 	\end{block}
 \end{frame}
-
-% \begin{frame}{Configuraciones iniciales 3/3}
-%   \begin{block}{Creando una clave nueva}
-% 		Abrimos la terminal en el HOME y ejecutamos \textit{cd .ssh} y luego \textit{ssh-keygen -f id\_rsa}. Le damos \textit{Enter} a todo hasta que termine el proceso.
-% 	\end{block}
-%   \pause
-%   \begin{block}{Subiendo la clave a GitLab}
-% 		\begin{itemize}
-% 		\item En la terminal, ejecutamos \textit{cat id\_rsa.pub} y copiamos todo lo que aparezca.
-%       \item Abrimos GitLab, vamos a Profile Settings, SSH Keys.
-%       \item Pegamos lo que tenemos copiado en el campo \textit{Key}.
-%       \item Ponemos para que expire mañana y le damos al boton \textit{Add key}.
-% 		\end{itemize}
-% 	\end{block}
-%     \pause
-%     \begin{block}{Funcionó?}
-%         Pueden probar que la clave quedó funcionando usando el siguiente comando: \textit{ssh git@gitlab.com}. Deberían ver su username de GitLab.
-%     \end{block}
-
-% \end{frame}

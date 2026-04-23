@@ -1,14 +1,3 @@
-% \begin{frame}{Git no decide nada}
-%     \begin{block}{DISCLAIMER - Mundos paralelos}
-%         Nos vamos a encontrar con varias situaciones donde git tiene que resolver que hacer frente a dos versiones "recientes" de un algo (archivo, repo, etc). Por ejemplo, repo local vs repo remoto, archivo commiteado vs archivo pusheado (por otra persona). Esto es complicado!
-%     \end{block}
-%
-%     \pause
-%
-%     En la clase anterior, mencionamos que git es muy sencillo y no toma decisiones por nosotros. Vamos a ver un ejemplo claro de esto.
-%
-% \end{frame}
-
 \begin{frame}[t]{Mandando fruta}
 
     \begin{ejercicio}{Ejercicio de a 2 personas en máquinas: \emoji{grapes} y \emoji{pear}}
@@ -43,19 +32,27 @@
 Auto-merging ensalada.txt
 CONFLICT (add/add): Merge conflict in ensalada.txt
 Automatic merge failed; fix conflicts and then commit the result
-\prompt{cat ensalada.txt}
-<<<<<<< HEAD
-bowl pera
-=======
-bowl manzana
->>>>>>> a473efc136d4fadf4d29476088b64dcbc82e8c03
-\prompt{nano ensalada.txt}
-\prompt{cat ensalada.txt}
-bowl pera manzana
+\prompt{code ensalada.txt}
+        \end{Verbatim}
+        \includegraphics[height=2.4in]{images/vscode-conflict.png}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[t, fragile=singleslide]{... una vez ya resueltos}
+    \begin{figure}[ht]
+        \small
+        \begin{Verbatim}[commandchars=\\\{\}]
 \prompt{git add ensalada.txt}
 \prompt{git commit -m "unificar ensaladas"}
 [main 64a1772] unificar ensaladas
 \prompt{git push}
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 427 bytes | 427.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://git.cubawiki.com.ar/mlang/ejemplo
+   18a3ed1..821a6d8  main -> main
         \end{Verbatim}
     \end{figure}
 \end{frame}

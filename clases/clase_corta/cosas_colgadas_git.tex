@@ -3,19 +3,17 @@
         git rm
     \end{comando}
 
-    \uncover<2->{
-        \begin{block}{}
-            Permite borrar un archivo y marcar este cambio como \textit{staged}. La sintaxis es \texttt{git rm [archivo]}.
-        \end{block}
-    }
+    \begin{block}{}
+        Permite borrar un archivo y marcar este cambio como \textit{staged}. La sintaxis es \texttt{git rm [archivo]}.
+    \end{block}
 
     \vspace{2em}
 
-    \begin{comando}
-        git mv
-    \end{comando}
+    \uncover<2->{
+      \begin{comando}
+          git mv
+      \end{comando}
 
-    \uncover<3->{
         \begin{block}{}
             Permite mover/renombrar un archivo y marcar este cambio como \textit{staged}. La sintaxis es \texttt{git mv [archivo] [nuevo nombre/ubicación]}.
         \end{block}
@@ -28,27 +26,24 @@
         git show
     \end{comando}
 
+    \begin{block}{}
+        Muestra el contenido del último commit. Esto incluye tanto el contenido (adiciones, borrados, etc) como metadatos (fecha, autor).
+
+        Podemos pedirle que nos muestre el contenido de algún contenido específico puntual.
+    \end{block}
+
     \uncover<2->{
+        \begin{comando}
+            git diff
+        \end{comando}
+
         \begin{block}{}
-            Muestra el contenido del último commit. Esto incluye tanto el contenido (adiciones, borrados, etc) como metadatos (fecha, autor).
+            Muestra las diferencias entre el estado actual de los archivos y el último commit.
 
-            Podemos pedirle que nos muestre el contenido de algún contenido específico puntual.
-        \end{block}
-    }
+            \vspace{.4em}
 
-    \begin{comando}
-        git diff
-    \end{comando}
-
-    \uncover<3->{
-        \begin{block}{}
-    
-        Muestra las diferencias entre el estado actual de los archivos y el último commit.
-
-        \vspace{.4em}
-
-        Si, en cambio, queremos ver las diferencias entre los cambios marcados como \textit{staged} y los
-        que confirmamos en el último \textit{commit}, podemos usar \texttt{git diff --staged}.
+            Si, en cambio, queremos ver las diferencias entre los cambios marcados como \textit{staged} y los
+            que confirmamos en el último \textit{commit}, podemos usar \texttt{git diff --staged}.
         \end{block}
     }
 \end{frame}

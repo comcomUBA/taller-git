@@ -34,17 +34,16 @@
 		Abrimos la terminal en el HOME y ejecutamos \textit{cd .ssh} y luego \textit{ssh-keygen -f id\_rsa}. Le damos \textit{Enter} a todo hasta que termine el proceso.
 	\end{block}
   \pause
-  \begin{block}{Subiendo la clave a GitLab}
+  \begin{block}{Subiendo la clave a COMCOMHub}
 		\begin{itemize}
 		\item En la terminal, ejecutamos \textit{cat id\_rsa.pub} y copiamos todo lo que aparezca.
-      \item Abrimos GitLab, vamos a Profile Settings, SSH Keys.
-      \item Pegamos lo que tenemos copiado en el campo \textit{Key}.
-      \item Ponemos para que expire mañana y le damos al boton \textit{Add key}.
+      \item Abrimos COMCOMHub, vamos a Configuración, Claves SSH / GPG, Añadir clave.
+      \item Pegamos lo que tenemos copiado en el campo \textit{Contenido}.
 		\end{itemize}
 	\end{block}
     \pause
     \begin{block}{Funcionó?}
-        Pueden probar que la clave quedó funcionando usando el siguiente comando: \textit{ssh git@gitlab.com}. Deberían ver su username de GitLab.
+        Pueden probar que la clave quedó funcionando usando el siguiente comando: \textit{ssh -p 222 git@ssh.cubawiki.com.ar}. Deberían ver su username de COMCOMHub.
     \end{block}
 
 \end{frame}
